@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бухгалтерские услуги - БУХ.Юр</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'scale-in': 'scaleIn 0.3s ease-out',
+                        'slide-up': 'slideUp 0.3s ease-out',
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                    },
+                    colors: {
+                        primary: '#8B5CF6',
+                        secondary: '#A855F7',
+                        accent: '#9333EA'
+                    },
+                    fontFamily: {
+                        montserrat: ['Futura PT', 'sans-serif'],
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Futura PT', sans-serif;                               
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-[#F5F7FA]">
+    <header id="head" class="max-w-full bg-[#F5F7FA] px-10 mb-10 fixed top-0 w-full z-50 shadow-xs"> <!-- sticky top-0 z-50 -->
+        <div class="px-4 pt-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div>
+                        <svg width="30" height="30" viewBox="0 0 283 404" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M51 244.133C48.3333 248.667 43.1333 257.333 39.5333 263.467L33 274.8L35.2667 279.867C37 283.867 38.3333 284.933 41 284.933C42.8667 284.933 53 285.6 63.4 286.267C94.6 288.533 118.867 296.4 134.867 309.467L141.933 315.2L147.133 310.667C164.6 295.6 192.867 286.667 227.933 285.333L247.533 284.533L249.667 280.133L251.8 275.6L241.667 258C236.067 248.267 230.6 239.2 229.533 238C226.2 234.267 193.133 236.267 178.067 241.2C166.6 244.933 156.2 250.667 148.2 257.6C144.467 260.933 141.133 263.067 140.867 262.4C140.733 261.733 137.133 258.4 133.133 255.067C118.333 242.533 100.333 236.933 72.2 236.4L55.9333 236L51 244.133ZM221.4 247.867C223.533 249.6 235.8 270 235.8 271.867C235.8 272.533 231.8 272.933 226.867 272.933C215.133 272.933 193.533 276.133 181.933 279.467C171.667 282.533 157.667 288.8 151.667 292.933L147.8 295.733V285.067C147.8 274.667 147.933 274.133 152.467 269.067C161 259.733 183.133 250.267 202.6 247.733C215.4 246 219.133 246.133 221.4 247.867ZM99.8 251.467C110.467 254.933 125.4 263.2 132.2 269.333C137 273.867 137.133 274.133 137.133 283.867V293.733L124.467 287.467C117.4 284 106.867 279.867 101 278.267C90.4667 275.467 58.7333 272.267 51.5333 273.333C49.4 273.6 47.8 273.467 47.8 273.2C47.8 272.4 55.1333 259.6 59.5333 252.4L62.7333 247.2L77 248C85.5333 248.4 94.6 249.867 99.8 251.467Z" fill="black"/>
+                            <path d="M131.715 48.4667C128.381 52.7334 128.248 55.8001 130.915 61.0001L132.915 64.8667L126.515 65.6667C114.648 67.1334 102.915 69.1334 84.5148 72.6001C68.1148 75.6667 65.4481 75.9334 59.1815 74.3334C49.3148 72.0667 45.7148 72.7334 45.1815 77.2667C44.6481 81.1334 48.2481 83.8001 56.5148 85.5334L60.6481 86.4667L56.6481 97.4001C46.6481 125 37.7148 147.267 35.8481 149.267C34.7815 150.6 32.7815 151.667 31.3148 151.667C27.9815 151.667 28.2481 156.067 32.1148 164.333C35.7148 172.2 41.4481 177.4 51.5815 182.2C73.4481 192.467 99.9815 179.133 105.448 155.267C106.248 151.933 105.981 151.667 102.381 151.667C99.5815 151.667 97.8481 150.733 96.6481 148.6C94.6481 144.867 73.0481 87.1334 73.4481 86.6001C73.9815 86.2001 114.515 82.6001 125.315 82.0667C131.315 81.8001 132.915 82.0667 132.915 83.6667C133.048 94.3334 126.915 191.133 126.115 191.667C125.448 192.067 124.115 194.733 123.181 197.667C121.315 203.133 121.181 203.133 108.381 206.2C102.115 207.667 94.2481 212.067 94.2481 214.067C94.2481 214.6 97.8481 215.8 102.248 216.6C112.248 218.467 126.248 225 133.715 231C136.781 233.533 139.715 235.667 140.248 235.667C140.648 235.667 143.315 233.933 145.981 231.667C152.515 226.467 169.981 218.467 179.048 216.6C183.048 215.8 186.115 214.467 185.848 213.667C185.048 211.133 175.048 206.333 167.315 204.867C159.848 203.4 159.581 203.133 157.981 198.067C157.181 195.133 155.448 192.067 154.248 191.267C151.981 189.667 151.315 180.733 147.981 102.467L147.181 81.9334L161.048 82.8667C179.315 84.0667 206.781 86.4667 207.181 86.8667C207.848 87.5334 184.915 145.533 182.781 148.6C181.581 150.6 179.581 151.667 177.048 151.667H173.181L175.315 158.6C178.248 167.533 187.048 177.133 196.515 181.933C202.648 184.867 205.848 185.533 213.448 185.533C232.515 185.533 247.848 173.533 252.115 155.267C252.915 151.933 252.648 151.667 249.048 151.667C246.381 151.667 244.515 150.733 243.581 148.867C241.315 144.733 220.915 90.2001 220.915 88.4667C220.915 87.5334 223.581 86.2001 226.915 85.2667C233.315 83.5334 237.581 78.8667 236.115 75.0001C235.315 73.0001 234.115 72.8667 227.715 73.6667C214.115 75.4001 207.048 75.0001 190.248 71.4001C181.048 69.5334 169.715 67.5334 164.915 67.1334C160.115 66.6001 153.981 65.9334 151.181 65.5334L145.981 64.7334L148.781 61.8001C155.315 54.8667 150.115 45.0001 139.981 45.0001C135.581 45.0001 133.848 45.8001 131.715 48.4667ZM77.3148 123.933C82.9148 138.733 87.3148 151 87.0481 151.267C86.7815 151.533 77.5815 151.533 66.6481 151.4L46.6481 151L56.1148 124.067C61.3148 109.133 65.8481 97.0001 66.2481 97.0001C66.6481 97.0001 71.5815 109.133 77.3148 123.933ZM223.981 124.467C228.915 138.467 232.915 150.2 232.915 150.733C232.915 151.267 223.981 151.667 213.048 151.667H193.315L199.715 133.267C210.248 103.933 213.181 96.7334 214.248 97.9334C214.648 98.4667 219.181 110.467 223.981 124.467Z" fill="black"/>
+                            <path d="M134 3.19488C124 9.32822 104.667 17.9949 88.9333 23.4616C68.2667 30.5282 49.6 34.1282 22.4 35.9949L0 37.4616V143.062C0 232.795 0.266667 250.262 2 259.462C8.13333 291.595 21.2 316.262 45.0667 341.195C64.5333 361.328 86.9333 376.928 122 394.528L140.667 403.862L153.067 398.395C185.733 383.995 217.467 362.395 238.8 339.862C255.867 321.995 267.333 303.062 275.333 279.462C282.4 258.928 282.667 254.128 282.667 141.462V37.3282L264.4 36.3949C243.6 35.3282 219.467 31.5949 202.667 26.7949C181.6 20.6616 153.6 9.06155 143.733 2.12822C139.6 -0.805116 140.667 -0.938449 134 3.19488ZM149.067 25.4616C177.733 39.8616 217.867 50.5282 254.4 53.5949L265.467 54.5282L264.933 155.462C264.533 266.662 265.067 259.595 255.867 281.728L251.867 291.195L232.933 291.995C191.467 293.995 167.467 301.595 148.533 318.795L140.8 325.862L131.467 317.995C110.933 300.795 84 292.928 45.0667 292.928H30.9333L26.9333 283.195C17.6 260.928 18.1333 268.128 17.7333 156.128L17.2 54.6616L32.9333 53.0616C67.0667 49.5949 100.533 40.5282 124.4 28.2616C131.867 24.3949 138.4 21.1949 139.067 21.0616C139.6 21.0616 144.133 22.9282 149.067 25.4616ZM240 311.328C240 313.195 222 332.795 213.333 340.262C200.8 351.328 179.2 365.062 158.933 375.195L141.333 383.995L126.8 376.662C104.533 365.195 84.8 353.195 72.8 343.462C61.8667 334.662 41.6 312.662 43.7333 311.862C45.3333 311.328 93.3333 323.595 110.267 328.795C120.267 331.862 124.267 333.728 125.733 336.128C126.933 337.862 130.667 340.395 134 341.595C141.733 344.662 148.667 342.928 155.067 336.262C159.2 331.995 161.867 331.062 186.8 324.395C201.733 320.395 219.467 315.595 226 313.728C240 309.995 240 309.995 240 311.328Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <a href="indexx.html">
+                        <span class="text-2xl font-bold text-gray-800">БУХ.Юр</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <section class="hidden md:flex space-x-6">
+                    <a href="#" class="text-gray-700 hover:text-[#2E86DE] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.1117 4.49449C23.4296 2.94472 21.9074 1.65683 20.4317 2.227L2.3425 9.21601C0.694517 9.85273 0.621087 12.1572 2.22518 12.8975L6.1645 14.7157L8.03849 21.2746C8.13583 21.6153 8.40618 21.8791 8.74917 21.968C9.09216 22.0568 9.45658 21.9576 9.70712 21.707L12.5938 18.8203L16.6375 21.8531C17.8113 22.7334 19.5019 22.0922 19.7967 20.6549L23.1117 4.49449ZM3.0633 11.0816L21.1525 4.0926L17.8375 20.2531L13.1 16.6999C12.7019 16.4013 12.1448 16.4409 11.7929 16.7928L10.5565 18.0292L10.928 15.9861L18.2071 8.70703C18.5614 8.35278 18.5988 7.79106 18.2947 7.39293C17.9906 6.99479 17.4389 6.88312 17.0039 7.13168L6.95124 12.876L3.0633 11.0816ZM8.17695 14.4791L8.78333 16.6015L9.01614 15.321C9.05253 15.1209 9.14908 14.9366 9.29291 14.7928L11.5128 12.573L8.17695 14.4791Z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-[#2E86DE] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6.014 8.00613C6.12827 7.1024 7.30277 5.87414 8.23488 6.01043L8.23339 6.00894C9.14051 6.18132 9.85859 7.74261 10.2635 8.44465C10.5504 8.95402 10.3641 9.4701 10.0965 9.68787C9.7355 9.97883 9.17099 10.3803 9.28943 10.7834C9.5 11.5 12 14 13.2296 14.7107C13.695 14.9797 14.0325 14.2702 14.3207 13.9067C14.5301 13.6271 15.0466 13.46 15.5548 13.736C16.3138 14.178 17.0288 14.6917 17.69 15.27C18.0202 15.546 18.0977 15.9539 17.8689 16.385C17.4659 17.1443 16.3003 18.1456 15.4542 17.9421C13.9764 17.5868 8 15.27 6.08033 8.55801C5.97237 8.24048 5.99955 8.12044 6.014 8.00613Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z"/>
+                        </svg>
+                    </a>
+                    <a href="tel:71234567890" class="text-gray-700 hover:text-[#2E86DE] transition-colors">+7(123)456-78-90</a>
+                </section>
+                
+                <!-- Mobile Menu Button -->
+                <!-- <button id="mobile-menu-btn" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button> -->
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <!-- <nav id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600 transition-colors">Главная</a>
+                <a href="#services" class="block py-2 text-gray-700 hover:text-blue-600 transition-colors">Услуги</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600 transition-colors">О нас</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600 transition-colors">Контакты</a>
+            </nav> -->
+        </div>
+    </header>
+
+    <div id="menuOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 hidden animate-fade-in"></div>
+    <div id="contextMenu" class="fixed z-50 hidden">
+        <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-6 w-96 max-w-md shadow-2xl border border-white/20 animate-scale-in">
+            <!-- Заголовок меню -->
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-semibold text-gray-800">Заказать консультацию</h3>
+                <button id="closeMenu" class="text-gray-500 hover:text-gray-700 transition-colors p-1 rounded-full hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Форма -->
+            <form id="consultationForm" class="space-y-4">
+                <!-- ФИО -->
+                <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        ФИО <span class="text-red-500">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="fullName"
+                        name="fullName"
+                        required
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#2E86DE] focus:ring-2 focus:ring-[#2E86DE] focus:ring-opacity-20 transition-all duration-200 outline-none hover:shadow-md"
+                        placeholder="Введите ваше полное имя"
+                    >
+                </div>
+                
+                <!-- Номер телефона -->
+                <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        Номер телефона <span class="text-red-500">*</span>
+                    </label>
+                    <input 
+                        type="tel" 
+                        id="phone"
+                        name="phone"
+                        required
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#2E86DE] focus:ring-2 focus:ring-[#2E86DE] focus:ring-opacity-20 transition-all duration-200 outline-none hover:shadow-md"
+                        placeholder="+7 (___) ___-__-__"
+                    >
+                </div>
+                
+                <!-- Email -->
+                <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        Email
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email"
+                        name="email"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#2E86DE] focus:ring-2 focus:ring-[#2E86DE] focus:ring-opacity-20 transition-all duration-200 outline-none hover:shadow-md"
+                        placeholder="your@email.com"
+                    >
+                </div>
+                
+                <!-- Время для звонка -->
+                <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        Когда удобно созвониться?
+                    </label>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-50 transition-colors">
+                            <input type="radio" id="morning" name="callTime" value="morning" class="text-orange-500 focus:ring-orange-500">
+                            <label for="morning" class="text-sm text-gray-700 cursor-pointer">Утром (9:00 - 12:00)</label>
+                        </div>
+                        <div class="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-50 transition-colors">
+                            <input type="radio" id="afternoon" name="callTime" value="afternoon" class="text-orange-500 focus:ring-orange-500">
+                            <label for="afternoon" class="text-sm text-gray-700 cursor-pointer">Днем (12:00 - 17:00)</label>
+                        </div>
+                        <div class="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-50 transition-colors">
+                            <input type="radio" id="evening" name="callTime" value="evening" class="text-orange-500 focus:ring-orange-500">
+                            <label for="evening" class="text-sm text-gray-700 cursor-pointer">Вечером (17:00 - 20:00)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Комментарий -->
+                <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        Комментарий
+                    </label>
+                    <textarea 
+                        id="comment"
+                        name="comment"
+                        rows="3"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#2E86DE] focus:ring-2 focus:ring-[#2E86DE] focus:ring-opacity-20 transition-all duration-200 outline-none resize-none hover:shadow-md"
+                        placeholder="Укажите суть вопроса или дополнительную информацию..."
+                    ></textarea>
+                </div>
+                
+                <!-- Кнопка отправки -->
+                <div class="pt-4">
+                    <!-- bg-gradient-to-r from-[#2E86DE] to-[#73BAFF] bg-clip-text text-transparent -->
+                    <button 
+                        type="submit"
+                        class="w-full bg-gradient-to-r from-[#73BAFF] to-[#2E86DE] text-white py-3 px-6 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 "
+                    >
+                        Отправить заявку
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="pt-32 pb-2">
+        <div class="container mx-auto max-w-6xl">
+            <nav class="text-sm text-gray-600 p-4">
+                <a href="indexx.html" class="hover:text-[#2E86DE]">Главная</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-800">Бухгалтерские услуги</span>
+            </nav>
+        </div>
+    </section>
+    <!-- Main Content Section -->
+    <section class="py-10 bg-[#F5F7FA]">
+        <div class="container mx-auto">
+            <div class="max-w-6xl mx-auto p-4">
+                <div class="prose prose-lg max-w-none text-gray-700">
+                    <p class="lead text-xl mb-10">
+                        Надежный бухгалтерский учет — основа финансовой стабильности и юридической чистоты вашего бизнеса. Мы предлагаем полный спектр бухгалтерских услуг для ИП и ООО, позволяющий вам сосредоточиться на развитии компании, уверенно планировать и принимать обоснованные управленческие решения.
+                    </p>
+
+                    <h2 class="text-3xl font-bold text-gray-900 mt-16 mb-6 pb-2 border-b border-gray-200 text-center">Что входит в комплексное бухгалтерское сопровождение</h2>
+                    <p class="mb-6">
+                        Наше комплексное бухгалтерское обслуживание охватывает все ключевые аспекты ведения вашего бизнеса:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-3 mb-10">
+                        <li><strong>Полное ведение бухгалтерского и налогового учета</strong> в соответствии с действующим законодательством.</li>
+                        <li><strong>Подготовка и сдача всех обязательных отчетов</strong> в ИФНС, ПФР, ФСС, Росстат и другие органы.</li>
+                        <li><strong>Консультации по вопросам налогообложения</strong>, оптимизации расходов и выбора наиболее выгодных режимов налогообложения.</li>
+                        <li><strong>Кадровый учет и консультации</strong> по трудовому законодательству, включая оформление документов, расчет зарплаты и отпусков.</li>
+                        <li><strong>Подготовка документов для банковских операций</strong> и проверок контролирующих органов.</li>
+                        <li><strong>Аналитические отчеты</strong> по ключевым финансово-экономическим показателям деятельности вашей компании.</li>
+                    </ul>
+
+                    <div class="grid md:grid-cols-2 gap-8 my-16">
+                        <div class="bg-[#F5F7FA] p-8 rounded-2xl border border-gray-200">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                                <svg class="w-8 h-8 text-[#2E86DE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                </svg>
+                                Бухгалтерия
+                            </h3>
+                            <p class="text-gray-600">
+                                Мы обеспечиваем полное и точное ведение бухгалтерского учета вашей организации. Наши специалисты обрабатывают первичную документацию, проводят все необходимые бухгалтерские операции, формируют журналы-ордера и главную книгу. Это позволяет получить объективную и актуальную информацию о финансовом состоянии компании в любой момент времени.
+                            </p>
+                        </div>
+                        <div class="bg-[#F5F7FA] p-8 rounded-2xl border border-gray-200">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                                <svg class="w-8 h-8 text-[#2E86DE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2zM10 8.5a.5.5 0 11-1 0 .5.5 0 011 0zm5 5a.5.5 0 11-1 0 .5.5 0 011 0z"></path>
+                                </svg>
+                                Налоги
+                            </h3>
+                            <p class="text-gray-600">
+                                Мы не просто ведем учет, мы помогаем вам платить меньше. Наши эксперты разрабатывают индивидуальные стратегии налоговой оптимизации, помогают выбрать наиболее выгодную систему налогообложения (ОСН, УСН, ЕНВД, ПСН, ЕСХН), своевременно рассчитывают и уплачивают все налоги, минимизируя риски и излишнюю нагрузку на бизнес.
+                            </p>
+                        </div>
+                        <div class="bg-[#F5F7FA] p-8 rounded-2xl border border-gray-200">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                                <svg class="w-8 h-8 text-[#2E86DE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                                Кадры
+                            </h3>
+                            <p class="text-gray-600">
+                                Правильное оформление трудовых отношений — залог спокойствия. Мы оказываем полное сопровождение кадрового делопроизводства: от разработки штатного расписания и образцов приказов до расчета зарплаты, отпусков, больничных и других выплат. Наши специалисты помогут вам избежать ошибок и штрафов со стороны инспекций.
+                            </p>
+                        </div>
+                        <div class="bg-[#F5F7FA] p-8 rounded-2xl border border-gray-200">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                                <svg class="w-8 h-8 text-[#2E86DE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                Отчетность
+                            </h3>
+                            <p class="text-gray-600">
+                                Своевременная и корректная отчетность — обязательное требование. Мы готовим и сдаем в установленные сроки все необходимые формы: бухгалтерскую (Бухгалтерский баланс, Отчет о финансовых результатах), налоговую (декларации по налогам), статистическую, а также отчетность в Пенсионный фонд, Фонд социального страхования и Росстат. Вы всегда будете уверены в соблюдении сроков.
+                            </p>
+                        </div>
+                    </div>
+
+                    
+                    <h2 class="text-4xl font-bold text-gray-900 mt-20 mb-12 text-center">Как проходят этапы работы</h2>
+                    <div class="relative max-w-4xl mx-auto">
+                        <!-- Timeline line -->
+                        <div class="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#2E86DE] to-[#73BAFF]"></div>
+                        <div class="space-y-12 sm:space-y-16">
+                            <!-- Step 1 -->
+                            <div class="relative flex items-start group">
+                                <div class="flex-shrink-0 w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br from-[#F5F7FA] to-[#F5F7FA] rounded-2xl flex items-center justify-center text-[#2e86de] font-bold text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300 z-10">
+                                    <svg class="w-5 h-5 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4 sm:ml-8 p-4 sm:p-8 rounded-3xl shadow-lg border border-gray-200 group-hover:shadow-2xl transition-all duration-300 flex-1">
+                                    <div class="flex flex-wrap items-center mb-2 sm:mb-4">
+                                        <span class="bg-[#2E86DE]/10 text-[#2E86DE] px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-semibold mr-2 mb-1 sm:mb-0">Этап 1</span>
+                                        <h3 class="text-lg sm:text-2xl font-bold text-gray-900">Анализ и консультация</h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                        Мы начинаем с детального изучения вашей деятельности, текущего состояния учета и ваших целей. На этой стадии мы определяем объем необходимых работ, выбираем оптимальную систему налогообложения и обсуждаем все условия сотрудничества.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="relative flex items-start group">
+                                <div class="flex-shrink-0 w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br from-[#F5F7FA] to-[#F5F7FA] rounded-2xl flex items-center justify-center text-[#2e86de] font-bold text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300 z-10">
+                                    <svg class="w-5 h-5 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4 sm:ml-8 p-4 sm:p-8 rounded-3xl shadow-lg border border-gray-200 group-hover:shadow-2xl transition-all duration-300 flex-1">
+                                    <div class="flex flex-wrap items-center mb-2 sm:mb-4">
+                                        <span class="bg-[#2E86DE]/10 text-[#2E86DE] px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-semibold mr-2 mb-1 sm:mb-0">Этап 2</span>
+                                        <h3 class="text-lg sm:text-2xl font-bold text-gray-900">Заключение договора</h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                        После согласования всех условий мы подписываем официальный договор, в котором четко прописаны перечень услуг, сроки выполнения, стоимость и ответственность сторон. Это обеспечивает прозрачность и защиту интересов обеих сторон.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <!-- Step 3 -->
+                            <div class="relative flex items-start group">
+                                <div class="flex-shrink-0 w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br from-[#F5F7FA] to-[#F5F7FA] rounded-2xl flex items-center justify-center text-[#2e86de] font-bold text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300 z-10">
+                                    <svg class="w-5 h-5 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4 sm:ml-8 p-4 sm:p-8 rounded-3xl shadow-lg border border-gray-200 group-hover:shadow-2xl transition-all duration-300 flex-1">
+                                    <div class="flex flex-wrap items-center mb-2 sm:mb-4">
+                                        <span class="bg-[#2E86DE]/10 text-[#2E86DE] px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-semibold mr-2 mb-1 sm:mb-0">Этап 3</span>
+                                        <h3 class="text-lg sm:text-2xl font-bold text-gray-900">Передача документов</h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                        Для начала работы вам необходимо передать нам первичные документы (банковские выписки, накладные, акты, договоры и т.д.). Это можно сделать удобным для вас способом: лично, по email, через защищенное облако или курьером.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Step 4 -->
+
+                            <div class="relative flex items-start group">
+                                <div class="flex-shrink-0 w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br from-[#F5F7FA] to-[#F5F7FA] rounded-2xl flex items-center justify-center text-[#2e86de] font-bold text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300 z-10">
+                                    <svg class="w-5 h-5 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4 sm:ml-8 p-4 sm:p-8 rounded-3xl shadow-lg border border-gray-200 group-hover:shadow-2xl transition-all duration-300 flex-1">
+                                    <div class="flex flex-wrap items-center mb-2 sm:mb-4">
+                                        <span class="bg-[#2E86DE]/10 text-[#2E86DE] px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-semibold mr-2 mb-1 sm:mb-0">Этап 4</span>
+                                        <h3 class="text-lg sm:text-2xl font-bold text-gray-900">Ведение учета и отчетность</h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                        Наши бухгалтеры обрабатывают вашу документацию, ведут учет в программе 1С или другой специализированной системе, готовят и сдают отчетность в контролирующие органы. Вы получаете доступ к личному кабинету, где можете отслеживать состояние дел в режиме реального времени.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <!-- Step 5 -->
+                            <div class="relative flex items-start group">
+                                <div class="flex-shrink-0 w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br from-[#F5F7FA] to-[#F5F7FA] rounded-2xl flex items-center justify-center text-[#2e86de] font-bold text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300 z-10">
+                                    <svg class="w-5 h-5 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4 sm:ml-8 p-4 sm:p-8 rounded-3xl shadow-lg border border-gray-200 group-hover:shadow-2xl transition-all duration-300 flex-1">
+                                    <div class="flex flex-wrap items-center mb-2 sm:mb-4">
+                                        <span class="bg-[#2E86DE]/10 text-[#2E86DE] px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-semibold mr-2 mb-1 sm:mb-0">Этап 5</span>
+                                        <h3 class="text-lg sm:text-2xl font-bold text-gray-900">Проверки и поддержка</h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                        В случае получения запросов от налоговой инспекции или других контролирующих органов, мы оказываем полную поддержку: готовим необходимые пояснения, собираем документы, представляем интересы вашей компании. Кроме того, вы всегда можете рассчитывать на консультации по любым возникающим вопросам.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-3xl font-bold text-gray-900 mt-16 mb-6 pb-2 border-b border-gray-200 text-center">Почему выбирают нас</h2>
+                    <div class="grid md:grid-cols-3 gap-8 mt-10">
+                        <div class="text-center p-6 bg-[#F5F7FA] rounded-xl">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-[#2E86DE] rounded-full flex items-center justify-center text-white text-2xl">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Профессионализм</h3>
+                            <p class="text-gray-600">
+                                Наши сотрудники — квалифицированные бухгалтеры с высшим образованием и многолетним практическим опытом.
+                            </p>
+                        </div>
+                        <div class="text-center p-6 bg-[#F5F7FA] rounded-xl">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-[#2E86DE] rounded-full flex items-center justify-center text-white text-2xl">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Своевременность</h3>
+                            <p class="text-gray-600">
+                                Мы строго соблюдаем установленные законодательством сроки сдачи отчетности и уплаты налогов.
+                            </p>
+                        </div>
+                        <div class="text-center p-6 bg-[#F5F7FA] rounded-xl">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-[#2E86DE] rounded-full flex items-center justify-center text-white text-2xl">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Прозрачность</h3>
+                            <p class="text-gray-600">
+                                Вы всегда в курсе текущего состояния вашего дела и этапов выполняемых работ.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-16 p-10 bg-gradient-to-r from-[#2E86DE] to-[#73BAFF] rounded-3xl text-white">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Готовы доверить бухгалтерию профессионалам?</h2>
+                        <p class="text-xl mb-8 max-w-2xl mx-auto">
+                            Свяжитесь с нами прямо сейчас и получите бесплатную консультацию по вашим вопросам.
+                        </p>
+                        <div class="flex flex-col sm:flex-row sm:justify-center gap-4">
+                            <!-- <button id="orderBtnTwo" class="bg-white text-[#2E86DE] hover:bg-gray-100 px-8 py-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 font-bold">
+                                Заказать услугу
+                            </button> -->
+                            <button id="consultationBtn" class="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 font-bold">
+                                Получить консультацию
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 flex">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <svg width="30" height="30" viewBox="0 0 283 404" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M51 244.134C48.3333 248.667 43.1333 257.334 39.5333 263.467L33 274.8L35.2667 279.867C37 283.867 38.3333 284.934 41 284.934C42.8667 284.934 53 285.6 63.4 286.267C94.6 288.534 118.867 296.4 134.867 309.467L141.933 315.2L147.133 310.667C164.6 295.6 192.867 286.667 227.933 285.334L247.533 284.534L249.667 280.134L251.8 275.6L241.667 258C236.067 248.267 230.6 239.2 229.533 238C226.2 234.267 193.133 236.267 178.067 241.2C166.6 244.934 156.2 250.667 148.2 257.6C144.467 260.934 141.133 263.067 140.867 262.4C140.733 261.734 137.133 258.4 133.133 255.067C118.333 242.534 100.333 236.934 72.2 236.4L55.9333 236L51 244.134ZM221.4 247.867C223.533 249.6 235.8 270 235.8 271.867C235.8 272.534 231.8 272.934 226.867 272.934C215.133 272.934 193.533 276.134 181.933 279.467C171.667 282.534 157.667 288.8 151.667 292.934L147.8 295.734V285.067C147.8 274.667 147.933 274.134 152.467 269.067C161 259.734 183.133 250.267 202.6 247.734C215.4 246 219.133 246.134 221.4 247.867ZM99.8 251.467C110.467 254.934 125.4 263.2 132.2 269.334C137 273.867 137.133 274.134 137.133 283.867V293.734L124.467 287.467C117.4 284 106.867 279.867 101 278.267C90.4667 275.467 58.7333 272.267 51.5333 273.334C49.4 273.6 47.8 273.467 47.8 273.2C47.8 272.4 55.1333 259.6 59.5333 252.4L62.7333 247.2L77 248C85.5333 248.4 94.6 249.867 99.8 251.467Z" fill="#D4CDCD"/>
+                            <path d="M131.715 48.4665C128.381 52.7332 128.248 55.7998 130.915 60.9998L132.915 64.8665L126.515 65.6665C114.648 67.1332 102.915 69.1332 84.5148 72.5998C68.1148 75.6665 65.4481 75.9332 59.1815 74.3332C49.3148 72.0665 45.7148 72.7332 45.1815 77.2665C44.6481 81.1332 48.2481 83.7998 56.5148 85.5332L60.6481 86.4665L56.6481 97.3998C46.6481 125 37.7148 147.266 35.8481 149.266C34.7815 150.6 32.7815 151.666 31.3148 151.666C27.9815 151.666 28.2481 156.066 32.1148 164.333C35.7148 172.2 41.4481 177.4 51.5815 182.2C73.4481 192.467 99.9815 179.133 105.448 155.266C106.248 151.933 105.981 151.666 102.381 151.666C99.5815 151.666 97.8481 150.733 96.6481 148.6C94.6481 144.866 73.0481 87.1332 73.4481 86.5998C73.9815 86.1998 114.515 82.5998 125.315 82.0665C131.315 81.7998 132.915 82.0665 132.915 83.6665C133.048 94.3332 126.915 191.133 126.115 191.667C125.448 192.067 124.115 194.733 123.181 197.667C121.315 203.133 121.181 203.133 108.381 206.2C102.115 207.667 94.2481 212.067 94.2481 214.067C94.2481 214.6 97.8481 215.8 102.248 216.6C112.248 218.467 126.248 225 133.715 231C136.781 233.533 139.715 235.667 140.248 235.667C140.648 235.667 143.315 233.933 145.981 231.667C152.515 226.467 169.981 218.467 179.048 216.6C183.048 215.8 186.115 214.467 185.848 213.667C185.048 211.133 175.048 206.333 167.315 204.867C159.848 203.4 159.581 203.133 157.981 198.067C157.181 195.133 155.448 192.067 154.248 191.267C151.981 189.667 151.315 180.733 147.981 102.466L147.181 81.9332L161.048 82.8665C179.315 84.0665 206.781 86.4665 207.181 86.8665C207.848 87.5332 184.915 145.533 182.781 148.6C181.581 150.6 179.581 151.666 177.048 151.666H173.181L175.315 158.6C178.248 167.533 187.048 177.133 196.515 181.933C202.648 184.867 205.848 185.533 213.448 185.533C232.515 185.533 247.848 173.533 252.115 155.266C252.915 151.933 252.648 151.666 249.048 151.666C246.381 151.666 244.515 150.733 243.581 148.866C241.315 144.733 220.915 90.1998 220.915 88.4665C220.915 87.5332 223.581 86.1998 226.915 85.2665C233.315 83.5332 237.581 78.8665 236.115 74.9998C235.315 72.9998 234.115 72.8665 227.715 73.6665C214.115 75.3998 207.048 74.9998 190.248 71.3998C181.048 69.5332 169.715 67.5332 164.915 67.1332C160.115 66.5998 153.981 65.9332 151.181 65.5332L145.981 64.7332L148.781 61.7998C155.315 54.8665 150.115 44.9998 139.981 44.9998C135.581 44.9998 133.848 45.7998 131.715 48.4665ZM77.3148 123.933C82.9148 138.733 87.3148 151 87.0481 151.266C86.7815 151.533 77.5815 151.533 66.6481 151.4L46.6481 151L56.1148 124.066C61.3148 109.133 65.8481 96.9998 66.2481 96.9998C66.6481 96.9998 71.5815 109.133 77.3148 123.933ZM223.981 124.466C228.915 138.466 232.915 150.2 232.915 150.733C232.915 151.266 223.981 151.666 213.048 151.666H193.315L199.715 133.266C210.248 103.933 213.181 96.7332 214.248 97.9332C214.648 98.4665 219.181 110.466 223.981 124.466Z" fill="#D4CDCD"/>
+                            <path d="M134 3.19513C124 9.32846 104.667 17.9951 88.9333 23.4618C68.2667 30.5285 49.6 34.1285 22.4 35.9951L0 37.4618V143.062C0 232.795 0.266667 250.262 2 259.462C8.13333 291.595 21.2 316.262 45.0667 341.195C64.5333 361.328 86.9333 376.928 122 394.528L140.667 403.862L153.067 398.395C185.733 383.995 217.467 362.395 238.8 339.862C255.867 321.995 267.333 303.062 275.333 279.462C282.4 258.928 282.667 254.128 282.667 141.462V37.3285L264.4 36.3951C243.6 35.3285 219.467 31.5951 202.667 26.7951C181.6 20.6618 153.6 9.0618 143.733 2.12846C139.6 -0.804871 140.667 -0.938205 134 3.19513ZM149.067 25.4618C177.733 39.8618 217.867 50.5285 254.4 53.5951L265.467 54.5285L264.933 155.462C264.533 266.662 265.067 259.595 255.867 281.728L251.867 291.195L232.933 291.995C191.467 293.995 167.467 301.595 148.533 318.795L140.8 325.862L131.467 317.995C110.933 300.795 84 292.928 45.0667 292.928H30.9333L26.9333 283.195C17.6 260.928 18.1333 268.128 17.7333 156.128L17.2 54.6618L32.9333 53.0618C67.0667 49.5951 100.533 40.5285 124.4 28.2618C131.867 24.3951 138.4 21.1951 139.067 21.0618C139.6 21.0618 144.133 22.9285 149.067 25.4618ZM240 311.328C240 313.195 222 332.795 213.333 340.262C200.8 351.328 179.2 365.062 158.933 375.195L141.333 383.995L126.8 376.662C104.533 365.195 84.8 353.195 72.8 343.462C61.8667 334.662 41.6 312.662 43.7333 311.862C45.3333 311.328 93.3333 323.595 110.267 328.795C120.267 331.862 124.267 333.728 125.733 336.128C126.933 337.862 130.667 340.395 134 341.595C141.733 344.662 148.667 342.928 155.067 336.262C159.2 331.995 161.867 331.062 186.8 324.395C201.733 320.395 219.467 315.595 226 313.728C240 309.995 240 309.995 240 311.328Z" fill="#D4CDCD"/>
+                        </svg>
+
+                        <!-- <svg width="30" height="30" viewBox="0 0 283 404" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M51 244.133C48.3333 248.667 43.1333 257.333 39.5333 263.467L33 274.8L35.2667 279.867C37 283.867 38.3333 284.933 41 284.933C42.8667 284.933 53 285.6 63.4 286.267C94.6 288.533 118.867 296.4 134.867 309.467L141.933 315.2L147.133 310.667C164.6 295.6 192.867 286.667 227.933 285.333L247.533 284.533L249.667 280.133L251.8 275.6L241.667 258C236.067 248.267 230.6 239.2 229.533 238C226.2 234.267 193.133 236.267 178.067 241.2C166.6 244.933 156.2 250.667 148.2 257.6C144.467 260.933 141.133 263.067 140.867 262.4C140.733 261.733 137.133 258.4 133.133 255.067C118.333 242.533 100.333 236.933 72.2 236.4L55.9333 236L51 244.133ZM221.4 247.867C223.533 249.6 235.8 270 235.8 271.867C235.8 272.533 231.8 272.933 226.867 272.933C215.133 272.933 193.533 276.133 181.933 279.467C171.667 282.533 157.667 288.8 151.667 292.933L147.8 295.733V285.067C147.8 274.667 147.933 274.133 152.467 269.067C161 259.733 183.133 250.267 202.6 247.733C215.4 246 219.133 246.133 221.4 247.867ZM99.8 251.467C110.467 254.933 125.4 263.2 132.2 269.333C137 273.867 137.133 274.133 137.133 283.867V293.733L124.467 287.467C117.4 284 106.867 279.867 101 278.267C90.4667 275.467 58.7333 272.267 51.5333 273.333C49.4 273.6 47.8 273.467 47.8 273.2C47.8 272.4 55.1333 259.6 59.5333 252.4L62.7333 247.2L77 248C85.5333 248.4 94.6 249.867 99.8 251.467Z" fill="black"/>
+                            <path d="M131.715 48.4667C128.381 52.7334 128.248 55.8001 130.915 61.0001L132.915 64.8667L126.515 65.6667C114.648 67.1334 102.915 69.1334 84.5148 72.6001C68.1148 75.6667 65.4481 75.9334 59.1815 74.3334C49.3148 72.0667 45.7148 72.7334 45.1815 77.2667C44.6481 81.1334 48.2481 83.8001 56.5148 85.5334L60.6481 86.4667L56.6481 97.4001C46.6481 125 37.7148 147.267 35.8481 149.267C34.7815 150.6 32.7815 151.667 31.3148 151.667C27.9815 151.667 28.2481 156.067 32.1148 164.333C35.7148 172.2 41.4481 177.4 51.5815 182.2C73.4481 192.467 99.9815 179.133 105.448 155.267C106.248 151.933 105.981 151.667 102.381 151.667C99.5815 151.667 97.8481 150.733 96.6481 148.6C94.6481 144.867 73.0481 87.1334 73.4481 86.6001C73.9815 86.2001 114.515 82.6001 125.315 82.0667C131.315 81.8001 132.915 82.0667 132.915 83.6667C133.048 94.3334 126.915 191.133 126.115 191.667C125.448 192.067 124.115 194.733 123.181 197.667C121.315 203.133 121.181 203.133 108.381 206.2C102.115 207.667 94.2481 212.067 94.2481 214.067C94.2481 214.6 97.8481 215.8 102.248 216.6C112.248 218.467 126.248 225 133.715 231C136.781 233.533 139.715 235.667 140.248 235.667C140.648 235.667 143.315 233.933 145.981 231.667C152.515 226.467 169.981 218.467 179.048 216.6C183.048 215.8 186.115 214.467 185.848 213.667C185.048 211.133 175.048 206.333 167.315 204.867C159.848 203.4 159.581 203.133 157.981 198.067C157.181 195.133 155.448 192.067 154.248 191.267C151.981 189.667 151.315 180.733 147.981 102.467L147.181 81.9334L161.048 82.8667C179.315 84.0667 206.781 86.4667 207.181 86.8667C207.848 87.5334 184.915 145.533 182.781 148.6C181.581 150.6 179.581 151.667 177.048 151.667H173.181L175.315 158.6C178.248 167.533 187.048 177.133 196.515 181.933C202.648 184.867 205.848 185.533 213.448 185.533C232.515 185.533 247.848 173.533 252.115 155.267C252.915 151.933 252.648 151.667 249.048 151.667C246.381 151.667 244.515 150.733 243.581 148.867C241.315 144.733 220.915 90.2001 220.915 88.4667C220.915 87.5334 223.581 86.2001 226.915 85.2667C233.315 83.5334 237.581 78.8667 236.115 75.0001C235.315 73.0001 234.115 72.8667 227.715 73.6667C214.115 75.4001 207.048 75.0001 190.248 71.4001C181.048 69.5334 169.715 67.5334 164.915 67.1334C160.115 66.6001 153.981 65.9334 151.181 65.5334L145.981 64.7334L148.781 61.8001C155.315 54.8667 150.115 45.0001 139.981 45.0001C135.581 45.0001 133.848 45.8001 131.715 48.4667ZM77.3148 123.933C82.9148 138.733 87.3148 151 87.0481 151.267C86.7815 151.533 77.5815 151.533 66.6481 151.4L46.6481 151L56.1148 124.067C61.3148 109.133 65.8481 97.0001 66.2481 97.0001C66.6481 97.0001 71.5815 109.133 77.3148 123.933ZM223.981 124.467C228.915 138.467 232.915 150.2 232.915 150.733C232.915 151.267 223.981 151.667 213.048 151.667H193.315L199.715 133.267C210.248 103.933 213.181 96.7334 214.248 97.9334C214.648 98.4667 219.181 110.467 223.981 124.467Z" fill="black"/>
+                            <path d="M134 3.19488C124 9.32822 104.667 17.9949 88.9333 23.4616C68.2667 30.5282 49.6 34.1282 22.4 35.9949L0 37.4616V143.062C0 232.795 0.266667 250.262 2 259.462C8.13333 291.595 21.2 316.262 45.0667 341.195C64.5333 361.328 86.9333 376.928 122 394.528L140.667 403.862L153.067 398.395C185.733 383.995 217.467 362.395 238.8 339.862C255.867 321.995 267.333 303.062 275.333 279.462C282.4 258.928 282.667 254.128 282.667 141.462V37.3282L264.4 36.3949C243.6 35.3282 219.467 31.5949 202.667 26.7949C181.6 20.6616 153.6 9.06155 143.733 2.12822C139.6 -0.805116 140.667 -0.938449 134 3.19488ZM149.067 25.4616C177.733 39.8616 217.867 50.5282 254.4 53.5949L265.467 54.5282L264.933 155.462C264.533 266.662 265.067 259.595 255.867 281.728L251.867 291.195L232.933 291.995C191.467 293.995 167.467 301.595 148.533 318.795L140.8 325.862L131.467 317.995C110.933 300.795 84 292.928 45.0667 292.928H30.9333L26.9333 283.195C17.6 260.928 18.1333 268.128 17.7333 156.128L17.2 54.6616L32.9333 53.0616C67.0667 49.5949 100.533 40.5282 124.4 28.2616C131.867 24.3949 138.4 21.1949 139.067 21.0616C139.6 21.0616 144.133 22.9282 149.067 25.4616ZM240 311.328C240 313.195 222 332.795 213.333 340.262C200.8 351.328 179.2 365.062 158.933 375.195L141.333 383.995L126.8 376.662C104.533 365.195 84.8 353.195 72.8 343.462C61.8667 334.662 41.6 312.662 43.7333 311.862C45.3333 311.328 93.3333 323.595 110.267 328.795C120.267 331.862 124.267 333.728 125.733 336.128C126.933 337.862 130.667 340.395 134 341.595C141.733 344.662 148.667 342.928 155.067 336.262C159.2 331.995 161.867 331.062 186.8 324.395C201.733 320.395 219.467 315.595 226 313.728C240 309.995 240 309.995 240 311.328Z" fill="black"/>
+                        </svg> -->
+                        <span class="ml-3 text-xl font-bold"><a href="#">БУХ.Юр</a></span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Профессиональное обслуживание на аутсорсе для вашего бизнеса
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">НАПИСАТЬ</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white">WHATSAPP</a></li>
+                        <li><a href="#" class="hover:text-white">TELEGRAM</a></li>
+                    </ul>
+                    <div class="mt-4">
+                        <h4 class="text-lg font-semibold mb-2">ПОЗВОНИТЬ</h4>
+                        <p class="text-gray-400 text-sm"><a href="tel:71234567890">+7 (499) 325-79-07</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 БУХ.Юр. Все права защищены.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            // // Placeholder for button actions
+            // const buttons = document.querySelectorAll('#orderBtn, #consultationBtn, #orderBtnTwo, #consultationBtnTwo');
+            // buttons.forEach(button => {
+            //     button.addEventListener('click', function(e) {
+            //          e.preventDefault();
+            //          alert('Функция заказа/консультации. В реальной версии здесь будет форма или переход на страницу связи.');
+            //          // Here you would typically open a modal, scroll to a form, or navigate to a contact page
+            //     });
+            // });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const consultationBtn = document.getElementById('consultationBtn');
+            const contextMenu = document.getElementById('contextMenu');
+            const menuOverlay = document.getElementById('menuOverlay');
+            const closeMenu = document.getElementById('closeMenu');
+            const changeClassFixed = document.getElementById('head');
+            // const consultationBtnTwo = document.getElementById('consultationBtnTwo')
+            
+            let isMenuOpen = false;
+
+            // Функция для открытия меню
+            function openMenu(event) {
+                if (isMenuOpen) return;
+                
+                event.stopPropagation();
+                isMenuOpen = true;
+                
+                // Показываем overlay
+                changeClassFixed.classList.remove('fixed')
+                menuOverlay.classList.remove('hidden');
+                
+                // Позиционируем меню по центру экрана
+                contextMenu.style.left = '50%';
+                contextMenu.style.top = '50%';
+                contextMenu.style.transform = 'translate(-50%, -50%)';
+                contextMenu.classList.remove('hidden');
+                
+                // Анимация полей формы с задержкой
+                const formFields = contextMenu.querySelectorAll('.space-y-4 > div');
+                formFields.forEach((field, index) => {
+                    field.style.animation = `slideUp 0.4s ease-out ${index * 0.1}s both`;
+                });
+            }
+
+            // Функция для закрытия меню
+            function closeMenuFunc() {
+                if (!isMenuOpen) return;
+                
+                // Добавляем класс для анимации исчезновения
+                const menuContainer = contextMenu.querySelector('.bg-white\\/95');
+                menuContainer.classList.add('animate-pulse');
+                
+                
+                setTimeout(() => {
+                    contextMenu.classList.add('hidden');
+                    menuOverlay.classList.add('hidden');
+                    menuContainer.classList.remove('animate-pulse');
+                    changeClassFixed.classList.add('fixed')
+                    isMenuOpen = false;
+                }, 200);
+            }
+
+            // Обработчики событий
+            consultationBtn.addEventListener('click', openMenu);
+            // consultationBtnTwo.addEventListener('click', openMenu);
+            closeMenu.addEventListener('click', closeMenuFunc);
+            menuOverlay.addEventListener('click', closeMenuFunc);
+            
+            // Закрытие по Escape
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && isMenuOpen) {
+                    closeMenuFunc();
+                }
+            });
+            
+            // Обработка отправки формы
+            const consultationForm = document.getElementById('consultationForm');
+            consultationForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Получаем данные формы
+                const formData = new FormData(consultationForm);
+                const fullName = formData.get('fullName');
+                const phone = formData.get('phone');
+                const email = formData.get('email');
+                const callTime = formData.get('callTime');
+                const comment = formData.get('comment');
+                
+                // Простая валидация
+                if (!fullName || !phone) {
+                    alert('Пожалуйста, заполните обязательные поля (ФИО и телефон)');
+                    return;
+                }
+                
+                // Имитация отправки
+                const submitBtn = consultationForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Отправляется...';
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+                
+                setTimeout(() => {
+                    alert(`Спасибо, ${fullName}! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.`);
+                    consultationForm.reset();
+                    closeMenuFunc();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+                }, 2000);
+            });
+            
+            // Маска для телефона
+            const phoneInput = document.getElementById('phone');
+            phoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.startsWith('7')) {
+                    value = value.slice(1);
+                }
+                if (value.length > 10) {
+                    value = value.slice(0, 10);
+                }
+                
+                let formatted = '+7';
+                if (value.length > 0) {
+                    formatted += ' (' + value.slice(0, 3);
+                    if (value.length > 3) {
+                        formatted += ') ' + value.slice(3, 6);
+                        if (value.length > 6) {
+                            formatted += '-' + value.slice(6, 8);
+                            if (value.length > 8) {
+                                formatted += '-' + value.slice(8, 10);
+                            }
+                        }
+                    }
+                }
+                e.target.value = formatted;
+            });
+            
+            // Предотвращаем закрытие при клике на само меню
+            contextMenu.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>
