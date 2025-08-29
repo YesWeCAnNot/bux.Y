@@ -34,7 +34,7 @@
                     },
                     fontFamily: {
                         montserrat: ['Futura PT', 'sans-serif'],
-                        // mono: ['Source Code Pro', 'monospace']
+                        
                     },
                     keyframes: {
                         fadeIn: {
@@ -122,7 +122,7 @@
 </head>
 <body class="bg-[#F5F7FA]">
     
-    <header id="head" class="max-w-full bg-[#F5F7FA] px-10 mb-10 fixed top-0 w-full z-50 shadow-xs"> <!-- sticky top-0 z-50 -->
+    <header id="head" class="max-w-full bg-[#F5F7FA] px-10 mb-10 fixed top-0 w-full z-50 shadow-xs"> 
         <div class="px-4 pt-8">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-3">
@@ -139,7 +139,6 @@
                     </a>
                 </div>
                 
-                <!-- Desktop Navigation -->
                 <section class="hidden md:flex space-x-6">
                     <a href="#" class="text-gray-700 hover:text-[#2E86DE] transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" viewBox="0 0 24 24">
@@ -155,15 +154,10 @@
                     <a href="tel:71234567890" class="text-gray-700 hover:text-[#2E86DE] transition-colors">+7(123)456-78-90</a>
                 </section>
                 
-                <!-- Mobile Menu Button -->
-                <!-- <button id="mobile-menu-btn" class="md:hidden">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button> -->
+                
             </div>
             
-            <!-- Mobile Navigation -->
+    
             <nav id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
                 <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600 transition-colors">Главная</a>
                 <a href="#services" class="block py-2 text-gray-700 hover:text-blue-600 transition-colors">Услуги</a>
@@ -179,46 +173,30 @@
                 <ul class="flex flex-col md:flex-row items-center justify-center md:space-x-6 space-y-2 md:space-y-0">
                     <li class="relative group">
                         <a href="AccountingServices.html" class="text-gray-800 hover:text-[#2E86DE]">Бухгалтерские</a>
-                        <!-- <ul class="absolute left-0 mt-0 w-64 bg-white shadow-lg rounded-md p-4 space-y-2 z-10 hidden group-hover:block">
-                            <li>
-                                <a href="AccountingServices.html" class="block text-gray-700 hover:text-blue-600">Бухгалтерское сопровождение</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block text-gray-700 hover:text-blue-600">Бухгалтер для маркетплейсов</a>
-                            </li>
-                        </ul> -->
+                        
                     </li>
 
                     
                     <li class="relative group">
                         <a href="LegalServices.html" class="text-gray-800 hover:text-[#2E86DE]">Юридические</a>
-                        <!-- <ul class="absolute left-0 mt-0 w-64 bg-white shadow-lg rounded-md p-4 space-y-2 z-10 hidden group-hover:block">
-                            <li>
-                                <a href="LegalServices.html" class="block text-gray-700 hover:text-blue-600">Абонентское сопровождение</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block text-gray-700 hover:text-blue-600">Ликвидация ООО</a>
-                            </li>
-                        </ul> -->
+                        
                     </li>
                     <li class="relative group">
                         <a href="MarketingServices.html" class="text-gray-800 hover:text-[#2E86DE]">Маркетинговые</a>
                     </li>
-                    <!-- <li class="relative group">
-                        <a href="itServices.html" class="text-gray-800 hover:text-[#2E86DE]">IT услуги</a>
-                    </li> -->
+                    
                 </ul>
 
             </div>
         </nav>
     </section>
 
-    <!-- Hero section -->
+   
     <section class="py-[7rem] md:py-[2.4rem] xl:py-[3rem]">
         <div class="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 animate-fade-in">
             <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
         
-                <!-- Текстовая часть -->
+
                 <div class="w-full text-center md:text-left">
                     <div>
                         <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#333333] mb-3 sm:mb-4 md:mb-6 leading-tight">
@@ -231,7 +209,6 @@
                         Профессиональное бухгалтерское обслуживание, юридическая поддержка, <br> а также услуги в сфере маркетинга и информационных технологий.
                     </p>
 
-                    <!-- Картинка показывается здесь на мобильных -->
                     <div class="w-full flex justify-center md:hidden mb-2 sm:mb-6">
                         <svg width="496" height="513" viewBox="0 0 496 513" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <ellipse cx="262" cy="257.276" rx="208" ry="207.276" fill="#D9D9D9" fill-opacity="0.48"/>
@@ -339,7 +316,6 @@
                         </div>
                     </div>
                     
-                    <!-- Кнопки -->
                     <div class="flex flex-col sm:flex-row sm:justify-center md:justify-start gap-3 sm:gap-4 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                         <button id="scrollToElementBtn" class="bg-[#2E86DE] hover:bg-[#1C75BE] text-white px-4 sm:px-5 md:px-6 lg:px-8 py-3 sm:py-3.5 md:py-4 lg:py-5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
                             Подробнее о услугах
@@ -353,7 +329,6 @@
                 </div>
 
                 <div>
-                    <!-- Картинка показывается здесь на десктопе -->
                     <div class="center-3d container-3d relative">
                         <svg width="416" height="463" viewBox="0 0 416 463" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <ellipse cx="208" cy="207.276" rx="208" ry="207.276" fill="#D9D9D9" fill-opacity="0.48"/>
@@ -400,7 +375,6 @@
     <div id="menuOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 hidden animate-fade-in"></div>
     <div id="contextMenu" class="fixed z-50 hidden">
         <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-6 w-96 max-w-md shadow-2xl border border-white/20 animate-scale-in">
-            <!-- Заголовок меню -->
             <div class="flex items-center justify-between mb-6">
                 <h3 class="text-xl font-semibold text-gray-800">Заказать консультацию</h3>
                 <button id="closeMenu" class="text-gray-500 hover:text-gray-700 transition-colors p-1 rounded-full hover:bg-gray-100">
@@ -410,9 +384,7 @@
                 </button>
             </div>
             
-            <!-- Форма -->
             <form id="consultationForm" class="space-y-4">
-                <!-- ФИО -->
                 <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
                     <label class="block text-sm font-medium text-gray-700 mb-2">
                         ФИО <span class="text-red-500">*</span>
@@ -427,7 +399,6 @@
                     >
                 </div>
                 
-                <!-- Номер телефона -->
                 <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
                     <label class="block text-sm font-medium text-gray-700 mb-2">
                         Номер телефона <span class="text-red-500">*</span>
@@ -442,7 +413,6 @@
                     >
                 </div>
                 
-                <!-- Email -->
                 <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
                     <label class="block text-sm font-medium text-gray-700 mb-2">
                         Email
@@ -456,7 +426,6 @@
                     >
                 </div>
                 
-                <!-- Время для звонка -->
                 <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
                     <label class="block text-sm font-medium text-gray-700 mb-2">
                         Когда удобно созвониться?
@@ -477,7 +446,6 @@
                     </div>
                 </div>
                 
-                <!-- Комментарий -->
                 <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
                     <label class="block text-sm font-medium text-gray-700 mb-2">
                         Комментарий
@@ -491,13 +459,10 @@
                     ></textarea>
                 </div>
                 
-                <!-- Кнопка отправки -->
                 <div class="pt-4">
-                    <!-- bg-gradient-to-r from-[#2E86DE] to-[#73BAFF] bg-clip-text text-transparent -->
                     <button 
                         type="submit"
-                        class="w-full bg-gradient-to-r from-[#73BAFF] to-[#2E86DE] text-white py-3 px-6 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 "
-                    >
+                        class="w-full bg-gradient-to-r from-[#73BAFF] to-[#2E86DE] text-white py-3 px-6 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50">
                         Отправить заявку
                     </button>
                 </div>
@@ -508,7 +473,6 @@
 
     <section class="py-20 bg-[#F5F7FA] relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10">
-            <!-- Заголовок секции -->
             <div class="text-center mb-16">
                 <div class="inline-block">
                     <span class="text-sm font-semibold text-[#2E86DE] bg-[#E6F0FA] px-4 py-2 rounded-full mb-4 inline-block tracking-wide uppercase">
@@ -517,28 +481,20 @@
                 </div>
                 <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#333333] mb-6">
                     Полный спектр услуг <br> для вашего бизнеса
-
-                    <!-- <span class="bg-gradient-to-r from-[#2E86DE] to-[#73BAFF] bg-clip-text text-transparent">для вашего бизнеса</span> -->
                 </h2>
                 <p class="text-2xl text-gray-600 max-w-3xl mx-auto">
                     Мы предоставляем комплексные решения, которые помогут вашему бизнесу расти и развиваться
                 </p>
             </div>
 
-            <!-- Сетка карточек услуг -->
             <div id="targetElement" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Карточка 1: Бухгалтерские услуги -->
                 <div class="service-card group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-white/50 overflow-hidden">
-                    <!-- Градиентная полоска сверху -->
                     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2E86DE] to-[#73BAFF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
                     
-                    <!-- Анимированная иконка -->
                     <div class="relative mb-6 flex justify-center">
                         <div class="w-20 h-20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ">
-                            <!-- <svg class="w-10 h-10 text-[#2E86DE] group-hover:text-[#73BAFF] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                            </svg> -->
+
                             <svg width="872" height="884" viewBox="0 0 872 884" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="539.5" y="515.5" width="2" height="2" fill="white"/>
                                 <path d="M80 323H79V322H78V321H143.5V322H144.5H146V322.5H148V323V324H149V325H150V326H151V327H153V328H154V329H156V330H158V331H159V332H161V333H163V334H165V335H167V336H168V337H170V338H172V339H174V340H176V341H177V342H178H179V343H180V344H181V345H182H183V346H184V347H185V348H186V349H187V350H188V351H189V352H190V353.5H191V355H192V356H193V356.5H194V359H195V361H196V363H197V366H198V367V374V374.5V376H197V377H196V378H195V379H194V380H193V381H192V382H191H190V383H188V384H185V385H184H176V384H175H174H173H172V383H171H170V382H169H168V381H167H166V380H165.5H165V379H164H163V378.5V378H162H161V377H160V376H159V375H158H157V374H156V373H155V372H154H153V371H152V370H151V369H150V368H149H148.5H148V367H147V366H146V365H145H144V364H143.5V363H142.5V362H141V361H140V360.5V360H139V359H138V358H137V357H136V356H135V355H134V354H133H132V353H131V352.5V352H130V351H129V350H128H127V349H126V348H125V347H124.5H124V346H123V345H122H121V344H120V343H118V342H117V341H116H115V340H113V339H111V338H109V337H107V336H105V335H103V334H102H100V333H98V332H97H95V331H93V330H91V329H89V328H88H87V327H86H85V326H84V325H83H82V324H81H80V323Z" fill="#F7BBB6" stroke="#F7BBB6"/>
@@ -623,7 +579,6 @@
                                 <path d="M91.0109 244.947H90.4239V244.989H90.3401V244.821H90.4239V244.737V244.318H90.5078V244.234V243.815H90.5917V243.479H90.6755V243.228H90.7594V242.976H90.8432V242.809H90.9271V242.725V242.557H91.0109V242.473V242.389H91.0948V242.264H91.1786V242.138H91.2625V242.012H91.3044V241.886H91.3883V241.76H91.4721V241.677H91.556V241.593H91.6398V241.509H91.7237V241.425H91.8914V241.341H91.9753V241.257H92.0591V241.173H92.143V241.09H92.2268V241.006H92.3945V240.922H92.5623V240.838H92.73V240.754H92.8977V240.67H93.0654V240.586H93.1492H93.317V240.503H93.5685V240.419H93.8201V240.335H94.0716V240.251H94.2813V240.503H94.3651V241.006H94.2813V241.257V241.593H94.1974V241.844H94.1136V241.928V242.096H94.0297V242.347H93.9459V242.515H93.862V242.683H93.7782V242.85H93.6943V243.018H93.6104V243.102H93.5266V243.27H93.4427V243.354H93.3589V243.437V243.521H93.275V243.605H93.1912V243.689H93.1073V243.773H93.0235V243.857H92.9396V243.941H92.8557V244.024H92.7719V244.108H92.688V244.192H92.6042V244.276H92.4365V244.36H92.3526V244.444H92.2688V244.528H92.101V244.611H91.9753V244.695H91.7656V244.779H91.5141V244.863H91.0109V244.947Z" fill="black" stroke="black"/>
                             </svg>
                         </div>
-                        <!-- Декоративные элементы вокруг иконки -->
                         <div class="absolute -top-2 -right-2 w-6 h-6 bg-[#73BAFF] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-300"></div>
                         <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-[#2E86DE] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500"></div>
                     </div>
@@ -636,7 +591,6 @@
                         Ведение учёта, налоги, отчётность и консультации для стабильного роста вашего бизнеса
                     </p>
 
-                    <!-- Список особенностей -->
                     <ul class="space-y-2 mb-6 text-lg">
                         <li class="flex items-center text-sm text-gray-600">
                             <div class="w-2 h-2 bg-[#2E86DE] rounded-full mr-3 group-hover:bg-[#73BAFF] transition-colors duration-300"></div>
@@ -656,26 +610,21 @@
                         </li>
                     </ul>
 
-                    <!-- Кнопка -->
                     <a href="AccountingServices.html" target="_self">
                         <button class="w-full py-3 px-6 bg-gradient-to-r from-[#2E86DE] to-[#73BAFF] text-white rounded-xl font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:shadow-lg">
                             Подробнее
                         </button>
                     </a>
 
-                    <!-- Декоративный элемент -->
                     <div class="absolute -bottom-10 -right-10 w-20 h-20 bg-gradient-to-br from-[#2E86DE]/10 to-[#73BAFF]/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
                 </div>
 
-                <!-- Карточка 2: Юридические услуги -->
                 <div class="service-card group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-white/50 overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2E86DE] to-[#73BAFF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
                     
                     <div class="relative mb-6 flex justify-center">
                         <div class="w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <!-- <svg class="w-10 h-10 text-[#8B5CF6] group-hover:text-[#A855F7] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16l-3-3m3 3l3-3"/>
-                            </svg> -->
+
                             <svg width="873" height="881" viewBox="0 0 873 881" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M849 516H844.5H456H454H445V515H442H439V514H438H437H436V513H435H434V512H433H432V511H431V510H430V509H429V508H428V507H427V506H426V505H425V503H424V501H423V500H422V499V495.076H421V353.285V280V279L420.979 23.0654H422V19H423V16H424V14H425V12H426V11H427V10H428V9H429V8H430V7H431V6H433V5H435V4H437V3H440V2H844.5H852V3H855V4H856H857H858V4.5V5H859H860V6H861V7H861.5H862H863V8H864V9H865V10H866V12H867V13H868V15H869V17H870V20H871V497H870V501H869V503H868V504H867V505V506H866V507H865V508H864V509H863V510H862V511H860V512H859V513H856.5V514H854V515H849V516Z" fill="#F5F5F5" fill-opacity="0.4" stroke="black" stroke-width="4"/>
                                 <ellipse cx="651" cy="565" rx="199.5" ry="199" fill="#3A8EE3"/>
@@ -717,8 +666,6 @@
                         <div class="absolute -top-2 -right-2 w-6 h-6 bg-[#73BAFF] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-300"></div>
                         <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-[#2E86DE] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500"></div>
 
-                        <!-- <div class="absolute -top-2 -right-2 w-6 h-6 bg-[#A855F7] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-all duration-300"></div>
-                        <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-[#8B5CF6] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500"></div> -->
                     </div>
 
                     <h3 class="text-3xl lg:text-2xl xl:text-3xl font-bold text-gray-800 mb-4 group-hover:text-[#2E86DE] transition-colors duration-300">
@@ -757,25 +704,15 @@
                         </button>
                     </a>
 
-                    <!-- <button class="w-full py-3 px-6 bg-gradient-to-r from-[#8B5CF6] to-[#A855F7] text-white rounded-xl font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:shadow-lg">
-                        Подробнее
-                    </button> -->
 
                     <div class="absolute -bottom-10 -right-10 w-20 h-20 bg-gradient-to-br from-[#2E86DE]/10 to-[#73BAFF]/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-
-                    <!-- <div class="absolute -bottom-10 -right-10 w-20 h-20 bg-gradient-to-br from-[#8B5CF6]/10 to-[#A855F7]/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div> -->
                 </div>
 
-                <!-- Карточка 3: Маркетинг -->
                 <div class="service-card group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-white/50 overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2E86DE] to-[#73BAFF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
                     
                     <div class="relative mb-6 flex justify-center"> <!--bg-gradient-to-br from-[#FEF3C7] to-[#FDE68A] rounded-2xl-->
                         <div class="w-20 h-20  flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <!-- <svg class="w-10 h-10 text-[#F59E0B] group-hover:text-[#EAB308] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
-                            </svg> -->
                             <svg width="905" height="880" viewBox="0 0 905 880" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M193 2.40068C168.1 8.00068 151.8 23.8007 145 49.0007C136.6 80.5007 156.5 112.701 190 121.701C204 125.501 223.7 122.601 236.5 114.901C244.3 110.301 255 98.5007 259.4 89.7007C265.4 77.9007 267.5 62.3007 265 48.9007C263.8 42.4007 258.5 31.2007 253.6 24.9007C239.6 7.00069 214.5 -2.29932 193 2.40068ZM230.7 10.0007C248.2 18.9007 259 33.0007 262.6 51.5007C266.2 70.8007 258.8 91.8007 243.4 105.901C236.6 112.101 230.6 115.301 220.8 117.901C209.1 121.001 204 121.301 194.8 119.501C173.1 115.201 155.6 100.601 149.1 81.5007C140 54.3007 153.5 22.2007 179.1 10.6007C189.2 6.00068 194.5 5.00068 208.7 5.30068L221.8 5.60068L230.7 10.0007Z" fill="black"/>
                                 <path d="M829.5 38.1C828.1 40.2 830.4 40.8 840.6 40.9L847.8 41L824.2 64.4L800.6 87.8L791.5 79.6C780.4 69.5 777.2 67 775.2 67C773.3 67 726 113.9 726 115.7C726 116.4 726.6 117 727.3 117C728 117 738.9 106.6 751.5 94C764.1 81.3 774.9 71 775.4 71C776.2 71 784.7 78.4 794.9 87.9C796.7 89.6 799.3 91 800.6 91C802.3 91 809.2 84.8 826.7 67.6L850.5 44.2L851.4 53.1C852.5 65.5 854.4 64.5 854.8 51.4C855.2 36 856.1 37 842 37C834.7 37 829.9 37.4 829.5 38.1Z" fill="black"/>
@@ -848,9 +785,6 @@
                         </div>
                         <div class="absolute -top-2 -right-2 w-6 h-6 bg-[#73BAFF] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-300"></div>
                         <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-[#2E86DE] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500"></div>
-
-                        <!-- <div class="absolute -top-2 -right-2 w-6 h-6 bg-[#EAB308] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-all duration-300"></div>
-                        <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-[#F59E0B] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500"></div> -->
                     </div>
 
                     <h3 class="text-3xl lg:text-2xl xl:text-3xl font-bold text-gray-800 mb-4 group-hover:text-[#2E86DE] transition-colors duration-300">
@@ -880,109 +814,12 @@
                             Подробнее
                         </button>
                     </a>
-                    <!-- <button class="w-full py-3 px-6 bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white rounded-xl font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:shadow-lg">
-                        Подробнее
-                    </button> -->
 
                     <div class="absolute -bottom-10 -right-10 w-20 h-20 bg-gradient-to-br from-[#2E86DE]/10 to-[#73BAFF]/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-                    <!-- <div class="absolute -bottom-10 -right-10 w-20 h-20 bg-gradient-to-br from-[#F59E0B]/10 to-[#EAB308]/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div> -->
                 </div>
 
-                <!-- Карточка 4: IT услуги -->
-                <!-- <div class="service-card group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-white/50 overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2E86DE] to-[#73BAFF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-                    
-                    <div class="relative mb-6 flex justify-center">
-                        <div class="w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            
-                            <svg width="810" height="794" viewBox="0 0 810 794" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M45.3733 367.091V328.407V319.304V317.029V315.891H46.5111V314.753V313.615H47.6489V312.478V311.34H48.7867V310.202V309.064H49.9244V307.927H51.0622V306.789H52.2V305.651H53.3378V304.513H54.4756V303.375H55.6133V302.238H56.7511H57.8889V301.1H59.0267V299.962H60.1644H61.3022H62.44V298.824H63.5778V297.687H68.1289H313.889H410.6H493.658V340.922V546.86V601.473V602.611V603.749V604.887V606.024V607.162H492.52V608.3V609.438V610.575H491.382V611.713H490.244V612.851H489.107V613.989H487.969V615.127H486.831V616.264H485.693V617.402H484.556V618.54H483.418V619.678H482.28V620.815H481.142H478.867H476.591V623.091H474.316H329.818H315.027V627.642V633.331H316.164V640.158H317.302V646.984H318.44V653.811H319.578V660.638H320.716V666.327H321.853V672.015H322.991V676.5H290.12H217.178V672.015H218.316V667.464H219.453V662.913H220.591V656.087H221.729V653.811V650.398V649.26V646.984H222.867V644.709V640.158V637.882H224.004V633.331V628.78H226.28V621.953H212.627H168.253H69.2667H68.1289H65.8533H63.5778H61.3022H59.0267V620.815V619.678H57.8889H56.7511H54.4756V618.54V617.402H52.2V616.264V615.127H49.9244V613.989V611.713H47.6489V609.438V608.3H45.3733V607.162V606.024V603.749V367.091Z" fill="#F5F5F5"/>
-                                <path d="M201.249 677.704L217.178 677.704H306.12H322.991V678.842H342.333H345.747H349.16H352.573H353.711H355.987V679.98H357.124H358.262V682.255H359.4V683.393V685.669H361.676V691.5H207.62H176.218V686.807H177.356V684.531H179.631V682.255H181.907V679.98H184.182V677.704H201.249Z" fill="#F5F5F5"/>
-                                <path d="M160.289 692.495H176.218H361.676H362.813H431.08H451.56V697.047H449.284H10.1022H5.55111H3.27556H2.13778H1V695.909V694.771H2.13778V693.633H3.27556V692.495H104.538H146.636H160.289Z" fill="#F5F5F5"/>
-                                <path d="M45.3733 367.091V328.407V319.304V317.029V315.891H46.5111V314.753V313.615H47.6489V312.478V311.34H48.7867V310.202V309.064H49.9244V307.927H51.0622V306.789H52.2V305.651H53.3378V304.513H54.4756V303.375H55.6133V302.238H56.7511H57.8889V301.1H59.0267V299.962H60.1644H61.3022H62.44V298.824H63.5778V297.687H68.1289H313.889H410.6H493.658V340.922V546.86V601.473V602.611V603.749V604.887V606.024V607.162H492.52V608.3V609.438V610.575H491.382V611.713H490.244V612.851H489.107V613.989H487.969V615.127H486.831V616.264H485.693V617.402H484.556V618.54H483.418V619.678H482.28V620.815H481.142H478.867H476.591V623.091H474.316H329.818H315.027V627.642V633.331H316.164V640.158H317.302V646.984H318.44V653.811H319.578V660.638H320.716V666.327H321.853V672.015H322.991V676.5H290.12H217.178V672.015H218.316V667.464H219.453V662.913H220.591V656.087H221.729V653.811V650.398V649.26V646.984H222.867V644.709V640.158V637.882H224.004V633.331V628.78H226.28V621.953H212.627H168.253H69.2667H68.1289H65.8533H63.5778H61.3022H59.0267V620.815V619.678H57.8889H56.7511H54.4756V618.54V617.402H52.2V616.264V615.127H49.9244V613.989V611.713H47.6489V609.438V608.3H45.3733V607.162V606.024V603.749V367.091Z" stroke="black" stroke-width="2"/>
-                                <path d="M201.249 677.704L217.178 677.704H306.12H322.991V678.842H342.333H345.747H349.16H352.573H353.711H355.987V679.98H357.124H358.262V682.255H359.4V683.393V685.669H361.676V691.5H207.62H176.218V686.807H177.356V684.531H179.631V682.255H181.907V679.98H184.182V677.704H201.249Z" stroke="black" stroke-width="2"/>
-                                <path d="M160.289 692.495H176.218H361.676H362.813H431.08H451.56V697.047H449.284H10.1022H5.55111H3.27556H2.13778H1V695.909V694.771H2.13778V693.633H3.27556V692.495H104.538H146.636H160.289Z" stroke="black" stroke-width="2"/>
-                                <rect x="421.978" y="289.723" width="18.2044" height="15.9289" fill="#F5F5F5"/>
-                                <path d="M441.32 295.411V298.824H443.596V296.549V295.411" stroke="#F5F5F5"/>
-                                <rect x="485.693" y="323.855" width="11.3778" height="15.9289" fill="#F5F5F5"/>
-                                <path d="M491.382 322.718H493.658H494.796H491.382ZM491.382 322.718V320.442" stroke="#F5F5F5"/>
-                                <path d="M71.5422 357.989V326.131V324.993H456.111H468.627V536.62V551.411H467.489H154.6H119.329H71.5422V357.989Z" fill="black" stroke="black" stroke-width="2"/>
-                                <path d="M201.249 421.705L222.867 400.087L224.004 398.949H226.28H227.418H228.556L229.693 400.087L230.831 401.225V402.363V403.5V405.776L206.938 429.669L197.836 438.771V439.909V441.047L198.973 442.185L217.178 460.389L231.969 475.18V476.318V478.594L230.831 479.731L229.693 480.869L228.556 482.007H226.28H224.004H222.867L184.182 443.323V442.185V441.047V439.909V438.771L185.32 437.634L201.249 421.705Z" fill="#3A8EE3" stroke="#3A8EE3" stroke-width="0.5"/>
-                                <line x1="278.738" y1="372.357" x2="240.053" y2="502.064" stroke="#3A8EE3" stroke-width="5"/>
-                                <path d="M337.782 428.532L308.2 398.949L303.649 397.812L300.236 401.225V404.638L312.751 417.154L326.404 430.807L334.369 438.772V439.909V441.047L315.027 460.389L300.236 475.18L299.098 476.318V477.456H300.236V478.594H301.373V479.732H302.511V480.869H303.649V482.007H304.787H305.924H307.062L324.129 464.94L342.333 446.736L346.884 442.185V439.909V437.634L337.782 428.532Z" fill="#3A8EE3"/>
-                                <path d="M300.236 475.18L315.027 460.389M300.236 475.18L299.098 476.318V477.456H300.236V478.594H301.373V479.732H302.511V480.869H303.649V482.007H304.787H305.924H307.062L324.129 464.94L342.333 446.736L346.884 442.185V439.909V437.634L337.782 428.532C326.23 416.979 319.753 410.502 308.2 398.949L303.649 397.812L300.236 401.225V404.638L312.751 417.154L326.404 430.807L334.369 438.772V439.909V441.047L300.236 475.18Z" stroke="#3A8EE3" stroke-width="0.5"/>
-                                <circle cx="269.516" cy="596.923" r="9.10222" fill="#1C1C1C"/>
-                                <path d="M47.6489 574.167H79.5067H208.076H415.151H453.836H491.382" stroke="black" stroke-width="2"/>
-                                <path d="M315.12 622L227.12 620.815V630H225.12L225.142 636L225.12 638H223.813V640.158V642.433H270.653H307.062H317.12L316.12 635.607L315.62 633.5L315.12 627.5V622Z" fill="black" stroke="black" stroke-width="0.5"/>
-                                <path d="M187.596 678.842H343.471" stroke="black" stroke-width="2"/>
-                                <path d="M644.982 309.065H623.364H591.12H447.808L416.386 203.579L416.289 200.976V198.7H417.427V197.563V196.425H418.564V195.287H550.547L578.991 291.998H601.747H644.982V293.136V309.065Z" fill="#C0C0C0"/>
-                                <path d="M535.756 310.203H619.951V314.754V315.891H618.813V318.167H617.676V320.443H616.538V322.718H615.4V323.856H614.262V324.994H613.124V326.131H611.987V327.269H610.849V328.407H609.711V329.545H608.573V330.683H606.298V331.82H604.022V332.958H601.747V334.096H578.991V332.958H572.164V331.82H564.2H556.236V330.683H549.409V329.545H542.582V328.407H534.618V327.269H527.791V326.131H511.862V324.994H509.587V323.856H506.173V322.718H505.036H503.898V321.58H502.76V320.443H501.622H500.484V319.305H499.347H498.209V318.167H497.071H495.933V317.029H494.796V315.891H493.658V314.754H492.52H491.382V313.616H490.244V312.478H489.107V306.789H492.52H493.658V307.927H494.796V309.065H495.933V310.203H497.071V311.34H498.209V312.478H499.347V313.616H500.484H501.622V314.754H502.76V315.891H503.898V317.029H505.036V318.167H506.173H508.449V317.029V314.754H507.311V313.616H506.173V312.478H505.036V311.34H503.898V310.203H502.76V309.065H501.622V305.651H506.173H507.311V306.789H508.449V307.927H509.587V309.065H510.724V310.203H511.862H513V311.34H514.138V312.478H515.276V313.616H516.413H517.551V314.754V315.891H518.689H519.827V317.029H520.964V318.167H522.102V319.305H524.378H525.516V318.167V317.029V315.891H524.378V314.754H523.24V313.616H522.102V312.478H520.964V311.34H519.827V310.203H518.689V309.065H517.551V307.927V304.514H519.827H522.102V305.651H523.24H524.378V306.789H525.516V307.927H526.653V309.065H527.791V310.203H528.929V311.34H530.067V312.478H531.204V313.616H532.342V314.754V315.891H533.48V317.029H535.756V315.891H536.893V314.754H538.031V312.478H536.893V311.34H535.756V310.203Z" fill="#F5F5F5" stroke="black" stroke-width="0.2"/>
-                                <circle cx="494.796" cy="253.313" r="9.10222" fill="#3A8EE3"/>
-                                <path d="M773.62 768V793H695.62V788H696.62V785H697.62V784H698.62V782H699.62V781H700.62V780H701.62V779H703.62V778H704.62V777H706.62V776H708.62L710.62 774L713.62 772L718.62 769L720.62 767L723.62 764L725.62 761L726.62 759V754H727.62V750H722.62V749H721.62V741H720.62V733H719.62V725H718.62V715.5H717.62V706H716.62V698H715.62L714.62 690L713.62 681L712.62 673L711.62 665L710.62 657L709.62 649L708.62 641L707.62 633L706.62 624L705.62 616L704.62 608L703.62 600L702.62 592L701.62 584L700.62 576L699.62 568L698.62 559L697.62 551L696.62 542L695.62 534L694.62 526L693.62 518L692.62 512L691.62 506L690.62 498L689.62 492L688.62 484.5L687.62 476.5L686.62 470L685.62 463L684.62 457.5L683.62 453L682.62 447L681.62 442L680.62 437H678.62V443H679.62L681.62 452L682.62 458L683.62 463L684.62 470L685.62 476L686.62 484V486L685.62 487V489.5V501L684.62 509L683.62 516L682.62 524L681.62 533L680.62 540L679.62 549L678.62 558L677.62 567L676.62 575L675.62 585L674.62 594L673.62 603L672.62 613L671.62 622L670.62 631L669.62 640L668.62 650L667.62 658L666.62 668L665.62 677L664.62 686L663.62 696L662.62 706L661.62 715L660.62 725L659.62 734L658.62 745L658.12 746L657.62 747V749H656.62V750H655.62V751H651.62V770.74H652.62V792V793H647.12H553.62V788H554.62V785H555.62V784H556.62V783H557.62V782H558.62V781H559.62V780H560.62V779H561.62V778H562.62H563.62V777H566.62V776H569.62V775H572.62V774H575.62V773H577.62V772H580.62V771H582.62V770H584.62V769H586.62V768H587.62H588.62V767H589.62V766H590.62V765H591.62V764H592.62H593.62V763H594.62V762H595.62V761H596.62V760H597.62V759H598.62V758H599.62V757H600.62V756H601.62V755V754H602.62V753H603.62V752V751.5V751H604.62V750H605.62V748H604.62H603.62V747H602.62V746H601.62V745H600.62V738H601.62V726H602.62V709H603.62V690.813H604.702V665.686H605.62V650.5V635H606.62V604H607.62V579H608.62V554.768H609.62V538H610.62V521H611.62V508H612.62V496H613.62V482H614.62V470H615.62V459H616.62V447H617.62V436H618.62V426H619.62V415.5H620.62V406H621.62V396H622.62V386H623.62V378.5H624.62V371H625.62V365H626.62V359H648.62V360H660.62V361H678.12H716.62V360H729.12H733.62V359H739.62V358H746.62V357H752.62H759.62V376.5H760.62V386L762.62 396.5L763.12 408L765.62 474V506.869H766.62V537H767.62V559H768.62V581H769.62V605H770.62V626H771.62V649H772.62V669H773.62V692H774.62V715H775.62V715.122V748H774.62V749H770.62V752H771.62V757H772.62V768H773.62Z" fill="black"/>
-                                <path d="M626.62 359V365H625.62V371H624.62V378.5H623.62V386H622.62V396H621.62V406H620.62V415.5H619.62V426H618.62V436H617.62V447H616.62V459H615.62V470H614.62V482H613.62V496H612.62V508H611.62V521H610.62V538H609.62V554.768H608.62V579H607.62V604H606.62V635H605.62V650.5V665.686H604.702V690.813H603.62V709H602.62V726H601.62V738H600.62V745H601.62V746H602.62V747H603.62V748H604.62H605.62V750H604.62V751H603.62V751.5V752V753H602.62V754H601.62V755V756H600.62V757H599.62V758H598.62V759H597.62V760H596.62V761H595.62V762H594.62V763H593.62V764H592.62H591.62V765H590.62V766H589.62V767H588.62V768H587.62H586.62V769H584.62V770H582.62V771H580.62V772H577.62V773H575.62V774H572.62V775H569.62V776H566.62V777H563.62V778H562.62H561.62V779H560.62V780H559.62V781H558.62V782H557.62V783H556.62V784H555.62V785H554.62V788H553.62V793H647.12H652.62V792V770.74H651.62V751H655.62V750H656.62V749H657.62V747L658.12 746L658.62 745L659.62 734L660.62 725L661.62 715L662.62 706L663.62 696L664.62 686L665.62 677L666.62 668L667.62 658L668.62 650L669.62 640L670.62 631L671.62 622L672.62 613L673.62 603L674.62 594L675.62 585L676.62 575L677.62 567L678.62 558L679.62 549L680.62 540L681.62 533L682.62 524L683.62 516L684.62 509L685.62 501V489.5V487L686.62 486V484L685.62 476L684.62 470L683.62 463L682.62 458L681.62 452L679.62 443H678.62V437H680.62L681.62 442L682.62 447L683.62 453L684.62 457.5L685.62 463L686.62 470L687.62 476.5L688.62 484.5L689.62 492L690.62 498L691.62 506L692.62 512L693.62 518L694.62 526L695.62 534L696.62 542L697.62 551L698.62 559L699.62 568L700.62 576L701.62 584L702.62 592L703.62 600L704.62 608L705.62 616L706.62 624L707.62 633L708.62 641L709.62 649L710.62 657L711.62 665L712.62 673L713.62 681L714.62 690L715.62 698H716.62V706H717.62V715.5H718.62V725H719.62V733H720.62V741H721.62V749H722.62V750H727.62V754H726.62V759L725.62 761L723.62 764L720.62 767L718.62 769L713.62 772L710.62 774L708.62 776H706.62V777H704.62V778H703.62V779H701.62V780H700.62V781H699.62V782H698.62V784H697.62V785H696.62V788H695.62V793H773.62V768H772.62V757H771.62V752H770.62V749H774.62V748H775.62V715.122V715H774.62V692H773.62V669H772.62V649H771.62V626H770.62V605H769.62V581H768.62V559H767.62V537H766.62V506.869H765.62V474L763.12 408L762.62 396.5L760.62 386V376.5H759.62V357H752.62H746.62V358H739.62V359H733.62V360H729.12H716.62V361H678.12H660.62V360H648.62V359H626.62ZM626.62 359H625.62" stroke="black"/>
-                                <path d="M715.62 115H714.62H714.12H712.62V114H711.62H710.62V113H709.62V112H708.62V110H709.62V109H711.62V108H713.62V107H714.62V106H715.62V105H716.62V104H717.62V103H718.62V102H719.62V101V100H720.62V99V98V97H721.62V89H720.62V88H719.62V87H718.62V86H717.62V85H716.62H708.62V86H706.62V87H705.62V88H704.62V89H703.62V90V91H702.62V92H701.62V93H698.62V92H697.62V91H696.62V90H695.62V89H694.62V88H693.62V87H692.62V85H691.62V83H690.62V79H689.62V60H688.62V59H682.62V60H679.62V61H676.62V62H672.62V63H668.62V64H664.62V65H656.62V64H653.12V65H648.62V62H647.62V61H646.62H645.62V60H644.62V58H643.62V56H642.62V48H643.62V47V46L644.62 44L648.62 41L651.62 40L656.62 38L661.62 36L669.62 33H672.62V32H675.62V31H676.62H680.62V30H690.62V31H697.62L701.62 32L708.62 35L713.62 38L718.62 42L721.12 46L724.62 52L728.62 58L731.62 66V81H730.62V84H729.62V88H728.62V91H727.62V94H726.62V96H725.62V99H724.62V101H723.62V103H722.62V104H721.62V106H720.62V108H719.62V109H719.12H718.62V110H717.62V111H715.62V115Z" fill="#313243" stroke="#313243"/>
-                                <path d="M768.62 408H769.62V403.5V386V349.5V310H768.62V307H767.62V302H766.62V298H765.62V293H764.62V289H763.62V284H762.62V279H761.62L761.12 276.5V271H763.62V270H767.62V269H771.62V268H776.62V267H781.62V266H786.62V265H791.62V264H796.12V262.5H799.12V270.5H800.12V282H801.62V292H802.62V293V299.5V317V326H801.62V335H800.62V345H799.62V353H798.62V361H797.62V369H796.62V377H795.62V385H794.62V392H793.62V398H792.62V406H791.62V409V433H790.62V439H789.62V443H788.62V446H787.62V449H786.62V452H785.62V454H784.62V456H783.62V458H782.62V459H781.62V460V461H780.62V462H779.62V464H778.62V465H777.62V466H775.62V463H776.62V461H777.62V459H778.62V456H779.62V452H780.62V449.5H781.62V448V444H780.62V443H778.62V444H777.62V447H776.62V450.5H775.62V454H774.62V457H773.62V460H772.62V463.5H771.12V467.5H769.12V468.5H767.12V469.5H765.62V468H764.62V466.5V464H765.62V462H766.62V460V457H767.62V453H768.62V449H769.62V443H770.62V433H769.62V432H766.62V433H765.62V438H765.12V442H763.62V445.5H762.62V448H761.62V449H756.62V448V445.5V440H757.62V433H758.62V424H759.62V422H760.62V420H761.62V419H762.62V417.5H763.62V416H764.62V415H765.62V414V413H766.62V412H767.62V410H768.62V408Z" fill="#F7BBB6" stroke="#E6AB9D"/>
-                                <path d="M807.62 260H808.62V262H803.62H800.12V261.5H795.12V262.5V263H791.12H790.62V264H786.62H785.62V265H781.62H780.62V266H776.62H775.62V267H770.62V268H766.62V269H762.62V270H759.62V271H755.62V288H756.62V313H757.62V354H755.62V355H752.62V356H745.62V357H738.62V358H731.62V359H722.62H715.62V360H701.12H661.62V359H649.62V358H639.62H638.62V357H632.62V356H628.62V332.5V327V309.5H645.62V297V291.5H629.12L628.793 267H628.12H627.12V266.5H626.12V266H625.12V265H624.12V264.5H621.62V264H618.62V263H615.62V262H613.62V261H610.62V260H607.62V259H603.62V258H600.62V257H596.62H594.62V256H589.62V255L590.62 252L592.62 245L594.62 239L596.62 233L598.62 227L600.62 221L602.62 215L604.62 209L607.62 203V200H608.62V198H609.62V195H610.62V193H611.62V192.5V190H612.62V188H613.62V186H614.62V184H615.62V183H616.62V182V181H617.62V180H618.62V179V178.5V178H619.62V177H620.62V176H621.62V175H622.62V174H623.62V173.5V173H624.62V172.5V172H625.62V171H626.62V170H628.62V169H630.62V168H631.62V167H633.62V166H636.62V165H639.62V164H641.62V163H644.62V162H646.62V161H649.62V160H652.62V159H655.62V158H658.62V157H662.62V156V155H663.62V154H664.62V153V152H665.62V151H666.62V150H667.62V149H669.62V148H673.62V159H674.62V161H675.62V163H676.62V164H677.62V165H678.62H679.62L680.62 165.5H681.12H681.62H683.12H683.62L684.12 166H684.62H685.62V165H686.62V164H687.62H688.62V163H689.62V162H690.62V161H691.62V160H692.62V159H693.62V158H695.62V157H696.62V156H697.62V155H698.62V154H699.62V153H700.62V152H701.62V151H702.62V150H703.62V149V148H704.62V147H705.62V146H706.62V144H707.62V143H708.62V141H709.62V140H710.62V139H711.62V138.5V138H712.62V137H714.62H717.62V138H718.62V140H719.62V142H720.62V145H721.62V149H722.62L727.62 150L733.12 151.5L739.62 154L744.12 156L761.62 164L770.62 169V170H772.62V171H773.62V172H774.62V173H775.62V174H776.62V174.5V175H777.62V176H778.62V177H779.62V178H780.62V179H781.62V180H782.62V182H783.12H783.62V183H784.62V184H785.62V186H786.62V188H787.62V190H788.62V192H789.62V194H790.62V197H791.62V199H792.62V202H793.62V206H794.62V209H795.62V212H796.62V216H797.62V220H798.62V224H799.62V228H800.62V232H801.62V236H802.62V240H803.62V244H804.62V248H805.62V252H806.62V256H807.62V260Z" fill="#F5F5F5" stroke="#C5C5C5"/>
-                                <path d="M674.62 158V144H681.62V143H684.62V142H686.62V141H688.62V140H689.62V136.5H688.62V135H683.62V136H682.62V137H679.62V138H669.62V137H666.62V136H664.62V135H663.62H662.62V134H661.62V133H660.62V132H659.62V131H658.62V130H657.62V129.5H656.62V127H655.62V124H654.62V121H653.62V117H652.62V111H651.62V80V72H652.62V67H653.62V65H655.62V66H665.62V65H669.62V64H673.62V63H677.62V62H680.62V61H683.62V60H687.62V61H688.62V80H689.62V84H690.62V86H691.62V88H692.62V89H693.62V90H694.62V91H695.62V92H696.62V93H697.62V94H698.62H702.62V93H703.62V92H704.62V90H705.62V89H706.62V88H707.62V87H709.62V86H716.62V87H717.62V88H718.62V89H719.62V90H720.62V96H719.62V99H718.62V101H717.62V102H716.62V103H715.62V104H714.62V105H713.62V106H712.62V107H710.62V108H708.62V109H707.62V113H708.62V114H709.62V139H708.62V140H707.62V141V142H706.62V143H705.62V144V145H704.62V145.5V146H703.62V147H702.62V148V149H701.62V150H700.62V151H699.62V152H698.62V153H697.62V154H696.62V155H695.62V156H694.62V157H692.62V158H691.62V159H690.62V160H689.62V161H688.62V162H687.62V163H685.62V164H684.62V165H684.12L683.62 164.5H680.62L679.62 164H678.62V163H677.62V162H676.62V160H675.62V158H674.62Z" fill="#F7BBB6" stroke="#E6AB9D"/>
-                                <path d="M598.62 264V263V262H599.62V261V260H600.62V259H601.62H602.62V260H606.62V261H609.62V262H612.62V263H614.62V264H616.62H617.62V265H620.62V265.5H623.12V266H623.62V270V291.5H592.62V288H593.62V283H594.62V278.5H595.62V275H596.62V271H597.62V267H598.62V264Z" fill="#F7BBB6" stroke="#E6AB9D"/>
-                                <path d="M619.62 315.5V310.5V310H542.12H535.62V311H537.12V312H538.62V315H538.12H537.12V316H536.12V317.5H535.62H533.12V316.5H532.12V314H531.12V313H530.12V312.5H529.62V311.5H528.62V310.5H527.62V309.5H527.12H526.12V309V308H525.12V307H524.12V306H522.12V304.5H517.62V305.5V308.5H519.12V309V310H520.12V311H521.12V312H522.12V313H523.12V314.5H523.62H524.62V315.5H526.12V317.5V319.5H524.62H522.12V318.5H520.62V317.5H519.62V316.5H517.12V316V314H515.12V313H514.12V312.5V311.5H513.62H512.62V310.5H510.62V309.5H509.12V308H508.12V307H507.12V305.5H501.62V306V308.5H502.62V309V310H503.12H504.12V311H505.12V312H506.12V313H507.62V314.5H508.62V318.5H504.62V318V317H503.62V316H502.62V315H501.62V314H499.12V313.5V312.5H498.62H497.62V311.5H496.62V310.5H495.62V310V309H494.62V308H493.62V307H493.12H489.12V312H490.62V313H491.62V314.5H493.62V315.5H494.62V316.5H495.12H496.12V318H498.12V319H498.62H500.62V320H503.12V321.5H504.12V322.5H506.62V323.5H509.62V324.5H512.12V326H520.12H528.12V327H534.62V328H535.12H538.62H542.62C542.62 328 542.271 328.825 542.62 329C542.795 329.087 543.12 329 543.12 329H549.62V330.5H553.62H556.62V331.5H567.12H572.62V332.5H574.62H579.12V334H579.62H599.12H601.62V333H603.62V332.5V331.5H605.12H606.12V330.5H608.12V329H608.62H609.62V328H610.62V327H611.62V326H612.62V324.5H613.12H614.12V323.5H615.12V322.5H616.12V320H616.62H617.62V318H618.62V315.5H619.62Z" fill="#F7BBB6" stroke="#E6AB9D"/>
-                                <path d="M262.62 283H259.62H259.12V123H163.62H160.62V122H158.12H157.12H155.62V121H153.62V120H152.62H151.62V119H150.62H149.62V118H148.62V117H147.12H146.62V116H145.62V115H144.62V113.5V113H143.62V112H142.62V110H141.62V108H140.62V107.5V104H139.62V94H140.62V91H141.62V89H142.62V87H143.62V86H144.62V85V84H145.62V83H146.62V82H147.62V81H148.62V80H149.62V79H151.62V78H153.62V77H156.62V76H159.62V75H162.62V70H163.62V67H164.62V66V64H165.62V62H166.62V61V60H167.62V59H168.62V57H169.62V56H170.62V55H171.62V53H172.62V52H173.62V51H174.62V50H175.62V49H177.12V48H178.62V47H179.62V46H181.62V45H183.62V44H185.62V43H188.62V42H193.62V41H206.62V42H210.62V43H214.62V41V39H215.62V36H216.62V34H217.62V31H218.62V30H219.62V28H220.62V26H221.62V25H222.62V23H223.62V22H224.62V21H225.62V20H226.62V19H227.62V18H228.62V17H229.62V16H230.62V15H231.62V14H232.62V13H233.62V12H234.62V11H236.62V10H237.62V9H239.62V8H241.62V7H243.62V6H245.62V5H248.62V4H251.62V3H252.62H255.62V2H260.62V1H261.62H276.62V2H280.62V3H284.62V4H287.62V5H289.62V6H291.62V7H293.62V8H295.62V9H297.62V10H298.62V11H300.62V12H301.62V13H302.62H303.62V14H304.62V15H305.62V16H306.62V17H307.62V17.5H308.62V19H309.62V20.5H310.62V22H311.62V23H312.62V24H313.62V25.5H314.62V27H315.62V29H316.62V31H317.62V33H318.62V36H319.62V39H320.62V42H321.62V47H322.62V55H323.62H328.62V56H334.62V57H338.62V58H341.62V59H343.62V60H345.62V61H347.62V62H348.62V63H349.62V64H350.62V65H351.62V66H352.62V67H353.62V68H354.62V70H355.62V71H356.62V73H357.62V76H358.62V78H359.62V83H360.62V85V96H359.62V99H358.62V102H357.62V104H356.62V106H355.62V108H354.62V109H353.62V111H352.62V112H351.62V113H350.62V114H349.62V115H348.62V116H347.62V117H345.62V118H344.62V119H342.62V120H340.62V121H338.62V122H335.62V123H333.62H262.62V256V283Z" fill="#F5F5F5" stroke="black" stroke-width="2"/>
-                                <path d="M3.62 695H450.62" stroke="black" stroke-width="3"/>
-                                <path d="M260.62 123.5L260.12 282" stroke="black" stroke-width="4"/>
-                                <path d="M261.12 123.5V122.5" stroke="black" stroke-width="3"/>
-                                <path d="M484.62 4C522.718 4 553.62 35.1062 553.62 73.5C553.62 111.894 522.718 143 484.62 143C446.522 143 415.62 111.894 415.62 73.5C415.62 35.1062 446.522 4 484.62 4Z" fill="#F5F5F5" stroke="black" stroke-width="3"/>
-                                <path d="M414.62 74L554.62 74.5M484.62 3V144M423.12 39.5C440.62 46.5 489.62 56.3 545.62 39.5M424.12 110C443.62 101.5 495.22 89.6 545.62 110" stroke="black" stroke-width="3"/>
-                                <path d="M480.12 4.5C467.82 15.7295 452.933 36.9512 449.741 63.15C446.862 86.778 453.496 114.454 480.12 142.5" stroke="black" stroke-width="3"/>
-                                <path d="M487.12 4.5C500.214 15.8109 516.061 37.1864 519.459 63.575C522.523 87.3742 515.461 115.251 487.12 143.5" stroke="black" stroke-width="3"/>
-                                <path d="M23.62 185V189V190H14.62V191H8.62V192H7.62V193H6.62V213H7.62V214V215H8.62V216H15.62V217H23.62V220H24.62V223H25.62V225H26.62V227H27.62V228V229H28.62V230V231H29.62V232H30.62V233V234H29.62V235H28.62V236V237H27.62V238H27.12H26.62V239H25.62V240H24.62V242H24.12H23.62V243H22.62V244H22.12H21.62V248H22.62V249H23.62V250H24.62V251H25.62V252H26.62V253H27.62V254H28.62V255H29.62V256H30.62V257H31.62V258H32.62V259H33.12H33.62V260H34.62V261H35.62V262H38.62V261H39.62H40.62V260H41.62V259H42.62H43.62V258H44.62V257H45.12H45.62V256H46.62H47.62V255H48.62V254H51.62V255H53.62V256H55.62V257H57.62V258H60.62V259H63.62V260H66.62V264H67.62V273H68.62V275H69.62V276H70.62V277H90.62V276H91.62V275H92.5203V271.152H93.62V261H94.62V260H96.62V259H99.62V258H102.62V257H104.62V256H106.62V255H107.12H108.62V254H109.62H111.62V255H112.62H113.62V256H114.62V256.5V257H115.62V258H117.62V259H118.62V260H119.62H120.62V261H121.62V262H124.62V261H125.62V260.5V260H126.62V259H127.62V258H128.62V257H129.62V256H130.62V255H131.62V254H132.62V253H133.62V252H134.62V251H135.62V250H136.62V249H137.62V248H138.62V246V244H137.62V242H136.62V241H135.62V240H134.62V238H133.62V237H132.62V236H131.62V235H130.62V232H131.62V231H132.62V229H133.62V226H134.62V224H135.62V221H136.62V218H137.62V217H143.62V216H150.62V215H151.62H152.62V214H153.62V193H152.62V192H151.62V191H146.62V190H137.62V189H136.62V188.5V185H135.62V183H134.62V180H133.62V178H132.62V177V176H131.62V175V174H130.62V172H131.62V171H132.62V169H133.62V168H134.62V167H135.62V165H136.62V164H137.62V162H138.62V158H137.62V157H136.62V156.5V156H135.62V155H134.62V154H133.62V153H132.62V152H131.62V151H130.62V150H129.62V149H128.62V148H127.62V147H126.62V146H125.62V145H123.62V144H122.62V145H121.62H120.62V146H119.62V147H118.62H117.62V148H116.62V149H115.62V150H114.62H113.62V151H112.62V152H111.62V153H109.62V152H108.62V151H106.62V150H104.62V149H102.62V148H99.62V147H96.62V146H94.62V145H93.62V136H92.62V131H91.62V130H89.62V129H71.62V130H69.62V131H68.62V133H67.62V141H66.62V146H65.62V147H61.62V148H58.62V149H56.62V150H55.62H54.62V151H52.62V152H51.62H50.62V153H48.62V152V151H46.62V150H45.62V149H43.62V148H42.62V147H41.62V146H40.62V145H39.62H38.62V144H37.62H35.62V145H34.62V146H33.62V147H32.62V148H31.62V149H30.62V150H29.62V151H28.62V153H27.62V154H26.62V155H25.62V156H24.62V157H23.62V158H22.62V159H21.62V162H22.62V163V164H23.62V165H24.62V166H25.62V167H26.62V169H27.62V170H28.62V171H29.62V172H30.62V172.5V174H29.62V175H28.62V176H27.62V178H26.62V180H25.62V182H24.62V185H23.62Z" stroke="black" stroke-width="2"/>
-                                <circle cx="80.62" cy="203" r="26.5" fill="#2A2F3C"/>
-                                <circle cx="80.62" cy="203" r="23.5" fill="#F5F5F5"/>
-                            </svg>
-
-                        </div>
-                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-[#73BAFF] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-300"></div>
-                        <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-[#2E86DE] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500"></div>
-                        
-                    </div>
-
-                    <h3 class="text-3xl lg:text-2xl xl:text-3xl font-bold text-gray-800 mb-4 group-hover:text-[#2E86DE] transition-colors duration-300">
-                        IT услуги
-                    </h3>
-                    
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Разработка, внедрение и поддержка технологических решений для автоматизации бизнеса
-                    </p>
-
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-[#2E86DE] rounded-full mr-3 group-hover:bg-[#73BAFF] transition-colors duration-300"></div>
-                            Landing page / Сайт-визитка 
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-[#2E86DE] rounded-full mr-3 group-hover:bg-[#73BAFF] transition-colors duration-300"></div>
-                            Корпоративный сайт
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-[#2E86DE] rounded-full mr-3 group-hover:bg-[#73BAFF] transition-colors duration-300"></div>
-                            Верстка по макетам
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-[#2E86DE] rounded-full mr-3 group-hover:bg-[#73BAFF] transition-colors duration-300"></div>
-                            Интеграция с внешними сервисами и API
-                        </li>
-                    </ul>
-                    <a href="itServices.html" target="_self">
-                        <button class="w-full py-3 px-6 bg-gradient-to-r from-[#2E86DE] to-[#73BAFF] text-white rounded-xl font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:shadow-lg">
-                            Подробнее
-                        </button>
-                    </a>
-                    
-                    <div class="absolute -bottom-10 -right-10 w-20 h-20 bg-gradient-to-br from-[#2E86DE]/10 to-[#73BAFF]/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-                    
-                </div> -->
+                
             </div>
-
-            <!-- Призыв к действию -->
             <div class="text-center mt-16">
                 <div class="inline-block p-8 bg-white/60 backdrop-blur-sm rounded-3xl shadow-lg border border-white/50">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Не нашли нужную услугу?</h3>
@@ -1048,7 +885,6 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-4">Консультация</h3>
                     <p class="text-gray-600">Анализируем ваши потребности и подбираем оптимальный пакет услуг</p>
-                    <!-- Стрелка для десктопа -->
                     <div class="hidden md:block absolute top-8 left-full w-full">
                         <svg class="w-12 h-8 text-[#2E86DE] opacity-30" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
@@ -1154,7 +990,6 @@
 
     <section class="py-20 bg-[#F5F7FA]">
         <div class="container mx-auto px-4">
-            <!-- Заголовок секции -->
             <div class="text-center mb-16">
                 <div class="inline-block">
                     <span class="text-sm font-semibold text-[#2E86DE] bg-[#E6F0FA] px-4 py-2 rounded-full mb-4 inline-block tracking-wide uppercase">
@@ -1170,10 +1005,8 @@
                 </p>
             </div>
 
-            <!-- FAQ Items -->
             <div class="max-w-4xl mx-auto space-y-4">
                 
-                <!-- Бухгалтерские услуги -->
                 <div class="faq-item bg-white rounded-2xl shadow-md border border-white/50 overflow-hidden transition-all duration-300 hover:shadow-md">
                     <button class="faq-question w-full px-8 py-6 text-left flex justify-between items-center group transition-all duration-300 hover:bg-gradient-to-r hover:from-[#2E86DE]/5 hover:to-[#73BAFF]/5">
                         <span class="text-lg md:text-xl font-semibold text-gray-800 group-hover:text-[#2E86DE] transition-colors duration-300">
@@ -1215,7 +1048,6 @@
                     </div>
                 </div>
 
-                <!-- Стоимость услуг -->
                 <div class="faq-item bg-white rounded-2xl shadow-md border border-white/50 overflow-hidden transition-all duration-300 hover:shadow-md">
                     <button class="faq-question w-full px-8 py-6 text-left flex justify-between items-center group transition-all duration-300 hover:bg-gradient-to-r hover:from-[#2E86DE]/5 hover:to-[#73BAFF]/5">
                         <span class="text-lg md:text-xl font-semibold text-gray-800 group-hover:text-[#2E86DE] transition-colors duration-300">
@@ -1251,8 +1083,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Юридические услуги -->
                 <div class="faq-item bg-white rounded-2xl shadow-md border border-white/50 overflow-hidden transition-all duration-300 hover:shadow-md">
                     <button class="faq-question w-full px-8 py-6 text-left flex justify-between items-center group transition-all duration-300 hover:bg-gradient-to-r hover:from-[#2E86DE]/5 hover:to-[#73BAFF]/5">
                         <span class="text-lg md:text-xl font-semibold text-gray-800 group-hover:text-[#2E86DE] transition-colors duration-300">
@@ -1294,7 +1124,6 @@
                     </div>
                 </div>
 
-                <!-- Сроки работы -->
                 <div class="faq-item bg-white rounded-2xl shadow-md border border-white/50 overflow-hidden transition-all duration-300 hover:shadow-md">
                     <button class="faq-question w-full px-8 py-6 text-left flex justify-between items-center group transition-all duration-300 hover:bg-gradient-to-r hover:from-[#2E86DE]/5 hover:to-[#73BAFF]/5">
                         <span class="text-lg md:text-xl font-semibold text-gray-800 group-hover:text-[#2E86DE] transition-colors duration-300">
@@ -1331,8 +1160,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Маркетинговые услуги -->
                 <div class="faq-item bg-white rounded-2xl shadow-md border border-white/50 overflow-hidden transition-all duration-300 hover:shadow-md">
                     <button class="faq-question w-full px-8 py-6 text-left flex justify-between items-center group transition-all duration-300 hover:bg-gradient-to-r hover:from-[#2E86DE]/5 hover:to-[#73BAFF]/5">
                         <span class="text-lg md:text-xl font-semibold text-gray-800 group-hover:text-[#2E86DE] transition-colors duration-300">
@@ -1386,7 +1213,6 @@
                     </div>
                 </div>
 
-                <!-- IT услуги -->
                 <div class="faq-item bg-white rounded-2xl shadow-md border border-white/50 overflow-hidden transition-all duration-300 hover:shadow-md">
                     <button class="faq-question w-full px-8 py-6 text-left flex justify-between items-center group transition-all duration-300 hover:bg-gradient-to-r hover:from-[#2E86DE]/5 hover:to-[#73BAFF]/5">
                         <span class="text-lg md:text-xl font-semibold text-gray-800 group-hover:text-[#2E86DE] transition-colors duration-300">
@@ -1440,7 +1266,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-16">
         <div class="max-w-3xl mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 flex">
@@ -1451,12 +1276,6 @@
                             <path d="M131.715 48.4665C128.381 52.7332 128.248 55.7998 130.915 60.9998L132.915 64.8665L126.515 65.6665C114.648 67.1332 102.915 69.1332 84.5148 72.5998C68.1148 75.6665 65.4481 75.9332 59.1815 74.3332C49.3148 72.0665 45.7148 72.7332 45.1815 77.2665C44.6481 81.1332 48.2481 83.7998 56.5148 85.5332L60.6481 86.4665L56.6481 97.3998C46.6481 125 37.7148 147.266 35.8481 149.266C34.7815 150.6 32.7815 151.666 31.3148 151.666C27.9815 151.666 28.2481 156.066 32.1148 164.333C35.7148 172.2 41.4481 177.4 51.5815 182.2C73.4481 192.467 99.9815 179.133 105.448 155.266C106.248 151.933 105.981 151.666 102.381 151.666C99.5815 151.666 97.8481 150.733 96.6481 148.6C94.6481 144.866 73.0481 87.1332 73.4481 86.5998C73.9815 86.1998 114.515 82.5998 125.315 82.0665C131.315 81.7998 132.915 82.0665 132.915 83.6665C133.048 94.3332 126.915 191.133 126.115 191.667C125.448 192.067 124.115 194.733 123.181 197.667C121.315 203.133 121.181 203.133 108.381 206.2C102.115 207.667 94.2481 212.067 94.2481 214.067C94.2481 214.6 97.8481 215.8 102.248 216.6C112.248 218.467 126.248 225 133.715 231C136.781 233.533 139.715 235.667 140.248 235.667C140.648 235.667 143.315 233.933 145.981 231.667C152.515 226.467 169.981 218.467 179.048 216.6C183.048 215.8 186.115 214.467 185.848 213.667C185.048 211.133 175.048 206.333 167.315 204.867C159.848 203.4 159.581 203.133 157.981 198.067C157.181 195.133 155.448 192.067 154.248 191.267C151.981 189.667 151.315 180.733 147.981 102.466L147.181 81.9332L161.048 82.8665C179.315 84.0665 206.781 86.4665 207.181 86.8665C207.848 87.5332 184.915 145.533 182.781 148.6C181.581 150.6 179.581 151.666 177.048 151.666H173.181L175.315 158.6C178.248 167.533 187.048 177.133 196.515 181.933C202.648 184.867 205.848 185.533 213.448 185.533C232.515 185.533 247.848 173.533 252.115 155.266C252.915 151.933 252.648 151.666 249.048 151.666C246.381 151.666 244.515 150.733 243.581 148.866C241.315 144.733 220.915 90.1998 220.915 88.4665C220.915 87.5332 223.581 86.1998 226.915 85.2665C233.315 83.5332 237.581 78.8665 236.115 74.9998C235.315 72.9998 234.115 72.8665 227.715 73.6665C214.115 75.3998 207.048 74.9998 190.248 71.3998C181.048 69.5332 169.715 67.5332 164.915 67.1332C160.115 66.5998 153.981 65.9332 151.181 65.5332L145.981 64.7332L148.781 61.7998C155.315 54.8665 150.115 44.9998 139.981 44.9998C135.581 44.9998 133.848 45.7998 131.715 48.4665ZM77.3148 123.933C82.9148 138.733 87.3148 151 87.0481 151.266C86.7815 151.533 77.5815 151.533 66.6481 151.4L46.6481 151L56.1148 124.066C61.3148 109.133 65.8481 96.9998 66.2481 96.9998C66.6481 96.9998 71.5815 109.133 77.3148 123.933ZM223.981 124.466C228.915 138.466 232.915 150.2 232.915 150.733C232.915 151.266 223.981 151.666 213.048 151.666H193.315L199.715 133.266C210.248 103.933 213.181 96.7332 214.248 97.9332C214.648 98.4665 219.181 110.466 223.981 124.466Z" fill="#D4CDCD"/>
                             <path d="M134 3.19513C124 9.32846 104.667 17.9951 88.9333 23.4618C68.2667 30.5285 49.6 34.1285 22.4 35.9951L0 37.4618V143.062C0 232.795 0.266667 250.262 2 259.462C8.13333 291.595 21.2 316.262 45.0667 341.195C64.5333 361.328 86.9333 376.928 122 394.528L140.667 403.862L153.067 398.395C185.733 383.995 217.467 362.395 238.8 339.862C255.867 321.995 267.333 303.062 275.333 279.462C282.4 258.928 282.667 254.128 282.667 141.462V37.3285L264.4 36.3951C243.6 35.3285 219.467 31.5951 202.667 26.7951C181.6 20.6618 153.6 9.0618 143.733 2.12846C139.6 -0.804871 140.667 -0.938205 134 3.19513ZM149.067 25.4618C177.733 39.8618 217.867 50.5285 254.4 53.5951L265.467 54.5285L264.933 155.462C264.533 266.662 265.067 259.595 255.867 281.728L251.867 291.195L232.933 291.995C191.467 293.995 167.467 301.595 148.533 318.795L140.8 325.862L131.467 317.995C110.933 300.795 84 292.928 45.0667 292.928H30.9333L26.9333 283.195C17.6 260.928 18.1333 268.128 17.7333 156.128L17.2 54.6618L32.9333 53.0618C67.0667 49.5951 100.533 40.5285 124.4 28.2618C131.867 24.3951 138.4 21.1951 139.067 21.0618C139.6 21.0618 144.133 22.9285 149.067 25.4618ZM240 311.328C240 313.195 222 332.795 213.333 340.262C200.8 351.328 179.2 365.062 158.933 375.195L141.333 383.995L126.8 376.662C104.533 365.195 84.8 353.195 72.8 343.462C61.8667 334.662 41.6 312.662 43.7333 311.862C45.3333 311.328 93.3333 323.595 110.267 328.795C120.267 331.862 124.267 333.728 125.733 336.128C126.933 337.862 130.667 340.395 134 341.595C141.733 344.662 148.667 342.928 155.067 336.262C159.2 331.995 161.867 331.062 186.8 324.395C201.733 320.395 219.467 315.595 226 313.728C240 309.995 240 309.995 240 311.328Z" fill="#D4CDCD"/>
                         </svg>
-
-                        <!-- <svg width="30" height="30" viewBox="0 0 283 404" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M51 244.133C48.3333 248.667 43.1333 257.333 39.5333 263.467L33 274.8L35.2667 279.867C37 283.867 38.3333 284.933 41 284.933C42.8667 284.933 53 285.6 63.4 286.267C94.6 288.533 118.867 296.4 134.867 309.467L141.933 315.2L147.133 310.667C164.6 295.6 192.867 286.667 227.933 285.333L247.533 284.533L249.667 280.133L251.8 275.6L241.667 258C236.067 248.267 230.6 239.2 229.533 238C226.2 234.267 193.133 236.267 178.067 241.2C166.6 244.933 156.2 250.667 148.2 257.6C144.467 260.933 141.133 263.067 140.867 262.4C140.733 261.733 137.133 258.4 133.133 255.067C118.333 242.533 100.333 236.933 72.2 236.4L55.9333 236L51 244.133ZM221.4 247.867C223.533 249.6 235.8 270 235.8 271.867C235.8 272.533 231.8 272.933 226.867 272.933C215.133 272.933 193.533 276.133 181.933 279.467C171.667 282.533 157.667 288.8 151.667 292.933L147.8 295.733V285.067C147.8 274.667 147.933 274.133 152.467 269.067C161 259.733 183.133 250.267 202.6 247.733C215.4 246 219.133 246.133 221.4 247.867ZM99.8 251.467C110.467 254.933 125.4 263.2 132.2 269.333C137 273.867 137.133 274.133 137.133 283.867V293.733L124.467 287.467C117.4 284 106.867 279.867 101 278.267C90.4667 275.467 58.7333 272.267 51.5333 273.333C49.4 273.6 47.8 273.467 47.8 273.2C47.8 272.4 55.1333 259.6 59.5333 252.4L62.7333 247.2L77 248C85.5333 248.4 94.6 249.867 99.8 251.467Z" fill="black"/>
-                            <path d="M131.715 48.4667C128.381 52.7334 128.248 55.8001 130.915 61.0001L132.915 64.8667L126.515 65.6667C114.648 67.1334 102.915 69.1334 84.5148 72.6001C68.1148 75.6667 65.4481 75.9334 59.1815 74.3334C49.3148 72.0667 45.7148 72.7334 45.1815 77.2667C44.6481 81.1334 48.2481 83.8001 56.5148 85.5334L60.6481 86.4667L56.6481 97.4001C46.6481 125 37.7148 147.267 35.8481 149.267C34.7815 150.6 32.7815 151.667 31.3148 151.667C27.9815 151.667 28.2481 156.067 32.1148 164.333C35.7148 172.2 41.4481 177.4 51.5815 182.2C73.4481 192.467 99.9815 179.133 105.448 155.267C106.248 151.933 105.981 151.667 102.381 151.667C99.5815 151.667 97.8481 150.733 96.6481 148.6C94.6481 144.867 73.0481 87.1334 73.4481 86.6001C73.9815 86.2001 114.515 82.6001 125.315 82.0667C131.315 81.8001 132.915 82.0667 132.915 83.6667C133.048 94.3334 126.915 191.133 126.115 191.667C125.448 192.067 124.115 194.733 123.181 197.667C121.315 203.133 121.181 203.133 108.381 206.2C102.115 207.667 94.2481 212.067 94.2481 214.067C94.2481 214.6 97.8481 215.8 102.248 216.6C112.248 218.467 126.248 225 133.715 231C136.781 233.533 139.715 235.667 140.248 235.667C140.648 235.667 143.315 233.933 145.981 231.667C152.515 226.467 169.981 218.467 179.048 216.6C183.048 215.8 186.115 214.467 185.848 213.667C185.048 211.133 175.048 206.333 167.315 204.867C159.848 203.4 159.581 203.133 157.981 198.067C157.181 195.133 155.448 192.067 154.248 191.267C151.981 189.667 151.315 180.733 147.981 102.467L147.181 81.9334L161.048 82.8667C179.315 84.0667 206.781 86.4667 207.181 86.8667C207.848 87.5334 184.915 145.533 182.781 148.6C181.581 150.6 179.581 151.667 177.048 151.667H173.181L175.315 158.6C178.248 167.533 187.048 177.133 196.515 181.933C202.648 184.867 205.848 185.533 213.448 185.533C232.515 185.533 247.848 173.533 252.115 155.267C252.915 151.933 252.648 151.667 249.048 151.667C246.381 151.667 244.515 150.733 243.581 148.867C241.315 144.733 220.915 90.2001 220.915 88.4667C220.915 87.5334 223.581 86.2001 226.915 85.2667C233.315 83.5334 237.581 78.8667 236.115 75.0001C235.315 73.0001 234.115 72.8667 227.715 73.6667C214.115 75.4001 207.048 75.0001 190.248 71.4001C181.048 69.5334 169.715 67.5334 164.915 67.1334C160.115 66.6001 153.981 65.9334 151.181 65.5334L145.981 64.7334L148.781 61.8001C155.315 54.8667 150.115 45.0001 139.981 45.0001C135.581 45.0001 133.848 45.8001 131.715 48.4667ZM77.3148 123.933C82.9148 138.733 87.3148 151 87.0481 151.267C86.7815 151.533 77.5815 151.533 66.6481 151.4L46.6481 151L56.1148 124.067C61.3148 109.133 65.8481 97.0001 66.2481 97.0001C66.6481 97.0001 71.5815 109.133 77.3148 123.933ZM223.981 124.467C228.915 138.467 232.915 150.2 232.915 150.733C232.915 151.267 223.981 151.667 213.048 151.667H193.315L199.715 133.267C210.248 103.933 213.181 96.7334 214.248 97.9334C214.648 98.4667 219.181 110.467 223.981 124.467Z" fill="black"/>
-                            <path d="M134 3.19488C124 9.32822 104.667 17.9949 88.9333 23.4616C68.2667 30.5282 49.6 34.1282 22.4 35.9949L0 37.4616V143.062C0 232.795 0.266667 250.262 2 259.462C8.13333 291.595 21.2 316.262 45.0667 341.195C64.5333 361.328 86.9333 376.928 122 394.528L140.667 403.862L153.067 398.395C185.733 383.995 217.467 362.395 238.8 339.862C255.867 321.995 267.333 303.062 275.333 279.462C282.4 258.928 282.667 254.128 282.667 141.462V37.3282L264.4 36.3949C243.6 35.3282 219.467 31.5949 202.667 26.7949C181.6 20.6616 153.6 9.06155 143.733 2.12822C139.6 -0.805116 140.667 -0.938449 134 3.19488ZM149.067 25.4616C177.733 39.8616 217.867 50.5282 254.4 53.5949L265.467 54.5282L264.933 155.462C264.533 266.662 265.067 259.595 255.867 281.728L251.867 291.195L232.933 291.995C191.467 293.995 167.467 301.595 148.533 318.795L140.8 325.862L131.467 317.995C110.933 300.795 84 292.928 45.0667 292.928H30.9333L26.9333 283.195C17.6 260.928 18.1333 268.128 17.7333 156.128L17.2 54.6616L32.9333 53.0616C67.0667 49.5949 100.533 40.5282 124.4 28.2616C131.867 24.3949 138.4 21.1949 139.067 21.0616C139.6 21.0616 144.133 22.9282 149.067 25.4616ZM240 311.328C240 313.195 222 332.795 213.333 340.262C200.8 351.328 179.2 365.062 158.933 375.195L141.333 383.995L126.8 376.662C104.533 365.195 84.8 353.195 72.8 343.462C61.8667 334.662 41.6 312.662 43.7333 311.862C45.3333 311.328 93.3333 323.595 110.267 328.795C120.267 331.862 124.267 333.728 125.733 336.128C126.933 337.862 130.667 340.395 134 341.595C141.733 344.662 148.667 342.928 155.067 336.262C159.2 331.995 161.867 331.062 186.8 324.395C201.733 320.395 219.467 315.595 226 313.728C240 309.995 240 309.995 240 311.328Z" fill="black"/>
-                        </svg> -->
                         <span class="ml-3 text-xl font-bold"><a href="#">БУХ.Юр</a></span>
                     </div>
                     <p class="text-gray-400 text-sm">
@@ -1485,7 +1304,6 @@
     </footer>
 
     <script>
-        // Simple FAQ accordion functionality
         document.querySelectorAll('.cursor-pointer').forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
@@ -1593,7 +1411,6 @@
                 `
             ];
     
-            // Получаем центральный элемент
             const centerElement = document.querySelector('.center-3d');
             const container = document.querySelector('.container-3d');
 
@@ -1602,8 +1419,6 @@
                 return;
             }
 
-
-            // Создаем спутники
             const satellites = satelliteSVGs.map((svg, i) => {
                 const div = document.createElement('div');
                 div.className = 'svg-container';
@@ -1612,7 +1427,6 @@
 
                 return {
                     el: div,
-                    // 3D параметры орбиты
                     angle: (i / satelliteSVGs.length) * Math.PI * 2,
                     inclination: (Math.random() - 0.5) * Math.PI * 0.6,
                     radius: 150 + Math.random() * 80,
@@ -1634,7 +1448,6 @@
                 };
             }
 
-            // Проверка попадания точки внутрь эллипса
             function isInEllipse(x, y, centerX, centerY, rx, ry) {
                 const dx = x - centerX;
                 const dy = y - centerY;
@@ -1649,22 +1462,17 @@
                 const ellipseRy = centerPos.height / 2 * 0.8;
 
                 satellites.forEach(sat => {
-                    // Обновляем углы
                     sat.angle += sat.speed;
                     sat.currentRotation += sat.rotationSpeed;
-
-                    // Вычисляем 3D позицию
                     const x3d = Math.cos(sat.angle) * sat.radius;
                     const y3d = Math.sin(sat.angle) * sat.radius * Math.cos(sat.inclination);
                     const z3d = Math.sin(sat.angle) * sat.radius * Math.sin(sat.inclination);
 
-                    // Переводим в 2D координаты относительно контейнера
                     const perspective = 1000;
                     const scale3d = perspective / (perspective + z3d);
                     const x = centerPos.x + x3d * scale3d;
                     const y = centerPos.y + y3d * scale3d;
 
-                    // Проверяем видимость
                     const isBehindCenter = z3d > 0;
                     const isInOrbit = isInEllipse(x, y, centerPos.x, centerPos.y, ellipseRx, ellipseRy);
                     
@@ -1675,11 +1483,9 @@
                         opacity = 1;
                     }
 
-                    // Вычисляем финальный размер с учетом перспективы
                     const baseScale = 0.3 + scale3d * 0.7;
                     const finalScale = Math.max(0.1, Math.min(1.2, baseScale));
 
-                    // Применяем трансформации относительно контейнера
                     sat.el.style.left = `${x - 30}px`;
                     sat.el.style.top = `${y - 30}px`;
                     sat.el.style.transform = `scale(${finalScale}) rotate(${sat.currentRotation}rad)`;
@@ -1689,12 +1495,10 @@
                 requestAnimationFrame(animate);
             }
     
-            // Запускаем анимацию
             animate();
     
-            // Обновляем при изменении размера окна
             window.addEventListener('resize', () => {
-                // Позиция будет пересчитана в следующем кадре анимации
+
             });
         })
     </script>
@@ -1709,35 +1513,29 @@
             
             let isMenuOpen = false;
 
-            // Функция для открытия меню
             function openMenu(event) {
                 if (isMenuOpen) return;
                 
                 event.stopPropagation();
                 isMenuOpen = true;
                 
-                // Показываем overlay
                 changeClassFixed.classList.remove('fixed')
                 menuOverlay.classList.remove('hidden');
                 
-                // Позиционируем меню по центру экрана
                 contextMenu.style.left = '50%';
                 contextMenu.style.top = '50%';
                 contextMenu.style.transform = 'translate(-50%, -50%)';
                 contextMenu.classList.remove('hidden');
                 
-                // Анимация полей формы с задержкой
                 const formFields = contextMenu.querySelectorAll('.space-y-4 > div');
                 formFields.forEach((field, index) => {
                     field.style.animation = `slideUp 0.4s ease-out ${index * 0.1}s both`;
                 });
             }
 
-            // Функция для закрытия меню
             function closeMenuFunc() {
                 if (!isMenuOpen) return;
                 
-                // Добавляем класс для анимации исчезновения
                 const menuContainer = contextMenu.querySelector('.bg-white\\/95');
                 menuContainer.classList.add('animate-pulse');
                 
@@ -1751,25 +1549,21 @@
                 }, 200);
             }
 
-            // Обработчики событий
             consultationBtn.addEventListener('click', openMenu);
             consultationBtnTwo.addEventListener('click', openMenu);
             closeMenu.addEventListener('click', closeMenuFunc);
             menuOverlay.addEventListener('click', closeMenuFunc);
             
-            // Закрытие по Escape
             document.addEventListener('keydown', function(event) {
                 if (event.key === 'Escape' && isMenuOpen) {
                     closeMenuFunc();
                 }
             });
             
-            // Обработка отправки формы
             const consultationForm = document.getElementById('consultationForm');
             consultationForm.addEventListener('submit', function(event) {
                 event.preventDefault();
                 
-                // Получаем данные формы
                 const formData = new FormData(consultationForm);
                 const fullName = formData.get('fullName');
                 const phone = formData.get('phone');
@@ -1777,13 +1571,11 @@
                 const callTime = formData.get('callTime');
                 const comment = formData.get('comment');
                 
-                // Простая валидация
                 if (!fullName || !phone) {
                     alert('Пожалуйста, заполните обязательные поля (ФИО и телефон)');
                     return;
                 }
                 
-                // Имитация отправки
                 const submitBtn = consultationForm.querySelector('button[type="submit"]');
                 const originalText = submitBtn.textContent;
                 submitBtn.textContent = 'Отправляется...';
@@ -1800,7 +1592,6 @@
                 }, 2000);
             });
             
-            // Маска для телефона
             const phoneInput = document.getElementById('phone');
             phoneInput.addEventListener('input', function(e) {
                 let value = e.target.value.replace(/\D/g, '');
@@ -1827,7 +1618,6 @@
                 e.target.value = formatted;
             });
             
-            // Предотвращаем закрытие при клике на само меню
             contextMenu.addEventListener('click', function(event) {
                 event.stopPropagation();
             });
@@ -1835,15 +1625,15 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const button = document.getElementById('scrollToElementBtn'); // Получаем кнопку по ID
-            if (button) { // Проверяем, найдена ли кнопка
+            const button = document.getElementById('scrollToElementBtn');
+            if (button) {
                 button.addEventListener('click', function(e) {
-                    e.preventDefault(); // Предотвращаем стандартное поведение, если это нужно
-                    const targetElement = document.getElementById('targetElement'); // Получаем целевой элемент по ID
-                    if (targetElement) { // Проверяем, найден ли целевой элемент
+                    e.preventDefault();
+                    const targetElement = document.getElementById('targetElement');
+                    if (targetElement) {
                         targetElement.scrollIntoView({ 
-                            behavior: 'smooth', // Плавная прокрутка
-                            block: 'center' // Элемент будет в верхней части viewport (можно 'center', 'end')
+                            behavior: 'smooth',
+                            block: 'center'
                         });
                     }
                 });
@@ -1862,7 +1652,6 @@
                 question.addEventListener('click', function() {
                     const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
                     
-                    // Закрыть все остальные FAQ
                     faqItems.forEach(otherItem => {
                         if (otherItem !== item) {
                             const otherAnswer = otherItem.querySelector('.faq-answer');
@@ -1872,7 +1661,6 @@
                         }
                     });
                     
-                    // Переключить текущий FAQ
                     if (isOpen) {
                         answer.style.maxHeight = '0px';
                         icon.style.transform = 'rotate(0deg)';
@@ -1887,3 +1675,4 @@
 </body>
 
 </html>
+
