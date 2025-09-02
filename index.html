@@ -1504,8 +1504,8 @@
                     sat.currentRotation += sat.rotationSpeed;
 
                     // Вычисляем 3D позицию
-                    const x3d = Math.cos(sat.angle) * sat.radius * 0.5;
-                    const y3d = Math.sin(sat.angle) * sat.radius * Math.cos(sat.inclination) * 0.5;
+                    const x3d = Math.cos(sat.angle) * sat.radius * 0.8;
+                    const y3d = Math.sin(sat.angle) * sat.radius * Math.cos(sat.inclination) * 0.8;
                     const z3d = Math.sin(sat.angle) * sat.radius * Math.sin(sat.inclination);
 
                     // Переводим в 2D координаты относительно контейнера
@@ -1735,6 +1735,7 @@
     </script>
 </body>
 </html>
+
 
 
 
