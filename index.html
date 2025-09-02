@@ -34,7 +34,6 @@
                     },
                     fontFamily: {
                         montserrat: ['Futura PT', 'sans-serif'],
-                        // mono: ['Source Code Pro', 'monospace']
                     },
                     keyframes: {
                         fadeIn: {
@@ -122,7 +121,7 @@
 </head>
 <body class="bg-[#F5F7FA]">
     
-    <header id="head" class="max-w-full bg-[#F5F7FA] px-10 mb-10 fixed top-0 w-full z-50 shadow-xs"> <!-- sticky top-0 z-50 -->
+    <header id="head" class="max-w-full bg-[#F5F7FA] px-10 mb-10 fixed top-0 w-full z-50 shadow-xs">
         <div class="px-4 pt-8">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-3">
@@ -139,7 +138,6 @@
                     </a>
                 </div>
                 
-                <!-- Desktop Navigation -->
                 <section class="hidden md:flex space-x-6">
                     <a href="#" class="text-gray-700 hover:text-[#2E86DE] transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" viewBox="0 0 24 24">
@@ -155,15 +153,8 @@
                     <a href="tel:71234567890" class="text-gray-700 hover:text-[#2E86DE] transition-colors">+7(123)456-78-90</a>
                 </section>
                 
-                <!-- Mobile Menu Button -->
-                <!-- <button id="mobile-menu-btn" class="md:hidden">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button> -->
             </div>
             
-            <!-- Mobile Navigation -->
             <nav id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
                 <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600 transition-colors">Главная</a>
                 <a href="#services" class="block py-2 text-gray-700 hover:text-blue-600 transition-colors">Услуги</a>
@@ -179,46 +170,25 @@
                 <ul class="flex flex-col md:flex-row items-center justify-center md:space-x-6 space-y-2 md:space-y-0">
                     <li class="relative group">
                         <a href="AccountingServices.html" class="text-gray-800 hover:text-[#2E86DE]">Бухгалтерские</a>
-                        <!-- <ul class="absolute left-0 mt-0 w-64 bg-white shadow-lg rounded-md p-4 space-y-2 z-10 hidden group-hover:block">
-                            <li>
-                                <a href="AccountingServices.html" class="block text-gray-700 hover:text-blue-600">Бухгалтерское сопровождение</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block text-gray-700 hover:text-blue-600">Бухгалтер для маркетплейсов</a>
-                            </li>
-                        </ul> -->
                     </li>
 
                     
                     <li class="relative group">
                         <a href="LegalServices.html" class="text-gray-800 hover:text-[#2E86DE]">Юридические</a>
-                        <!-- <ul class="absolute left-0 mt-0 w-64 bg-white shadow-lg rounded-md p-4 space-y-2 z-10 hidden group-hover:block">
-                            <li>
-                                <a href="LegalServices.html" class="block text-gray-700 hover:text-blue-600">Абонентское сопровождение</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block text-gray-700 hover:text-blue-600">Ликвидация ООО</a>
-                            </li>
-                        </ul> -->
                     </li>
                     <li class="relative group">
                         <a href="MarketingServices.html" class="text-gray-800 hover:text-[#2E86DE]">Маркетинговые</a>
                     </li>
-                    <!-- <li class="relative group">
-                        <a href="itServices.html" class="text-gray-800 hover:text-[#2E86DE]">IT услуги</a>
-                    </li> -->
                 </ul>
 
             </div>
         </nav>
     </section>
 
-    <!-- Hero section -->
     <section class="py-[7rem] md:py-[2.4rem] xl:py-[3rem]">
         <div class="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 animate-fade-in">
             <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
         
-                <!-- Текстовая часть -->
                 <div class="w-full text-center md:text-left">
                     <div>
                         <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#333333] mb-3 sm:mb-4 md:mb-6 leading-tight">
@@ -355,7 +325,7 @@
                 <div>
                     <!-- Картинка показывается здесь на десктопе -->
                     <div class="center-3d container-3d relative">
-                        <svg width="416" height="463" viewBox="0 0 416 463" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-64 lg:w-56 xl:w-48 2xl:w-40 h-auto" viewBox="0 0 416 463" fill="none" xmlns="http://www.w3.org/2000/svg"> <!-- width="416" height="463" -->
                             <ellipse cx="208" cy="207.276" rx="208" ry="207.276" fill="#D9D9D9" fill-opacity="0.48"/>
                             <path d="M185.894 192.347L188.907 197.008V197.099L188.542 197.922L187.811 199.75L187.263 202.126L186.716 203.954L186.351 205.325L186.168 206.604L185.803 208.432L185.255 210.351L185.072 210.169L182.334 204.502H181.786L132.761 230.458L92.4094 251.571L74.0594 261.258L73.6029 261.807L77.4372 268.844L94.144 300.467L112.859 335.471L141.343 389.029L143.534 393.141L144.538 394.786L144.082 395.061L142.986 395.792L142.164 396.432L140.978 398.168L139.882 399.813L139.06 401.367L138.421 403.012L138.33 402.921L105.008 339.767L87.6621 306.865L70.1337 274.054L61.9173 258.699V258.06L62.0086 257.42L151.75 210.169L184.433 192.986L185.438 192.529L185.894 192.347Z" fill="#2C2B42" stroke="black" stroke-opacity="0.29"/>
                             <path d="M167.377 328.631L170.935 326.623H171.026L170.935 326.897L170.296 328.722L169.566 330.913L168.745 333.286L167.833 336.024L167.468 337.211L166.647 337.759L153.875 344.787L140.465 352.271L138.549 352.819L137.089 352.545L136.086 351.906L135.447 350.993L134.9 349.989L134.717 348.985L134.9 347.89L135.173 347.069L135.903 346.156L148.31 339.128L167.377 328.631Z" fill="#3A8EE3" fill-opacity="0.58"/>
@@ -1886,3 +1856,4 @@
     </script>
 </body>
 </html>
+
